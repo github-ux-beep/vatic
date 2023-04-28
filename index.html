@@ -1,0 +1,3221 @@
+<!DOCTYPE HTML>
+  <html lang="">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="hero.1.0.0.js"></script>
+    <script src="fusion.1.0.0.js"></script>
+    </head>
+  <body>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #393433;
+  }
+  body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-element {
+    position: absolute;
+  }
+  .fusion--player {
+    background-color: #393433;
+  }
+  
+  
+        #guid_f36b5a6f_a897_41ed_ba23_e12ed145c13d {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #393433;
+}
+#guid_16bf2ab1_a7ed_43d9_88c4_6b37ddf59d18 {
+  width: 884px;
+  font-family: Helvetica Neue;
+  font-size: 200px;
+  color: #039eff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 99, 143);
+}
+#guid_1c23fbe1_3b95_46c4_8010_5524afdb7145 {
+  width: 798px;
+  font-family: Helvetica Neue;
+  font-size: 150px;
+  color: #fff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 99, 408);
+}
+#guid_16d18938_aa27_485b_b049_4d3f4b8acc31 {
+  width: 960px;
+  height: 960px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 960, 143);
+}
+#guid_4d18d130_d440_4d50_a92d_28e88c8797bf {
+  width: 348px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 612.5, 376.5);
+  opacity: 0;
+  pointer-events: none;
+}
+#guid_9f4a83bf_9bbd_498f_a0fb_675e40a8923b {
+  width: 307px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 136.5, 583.5);
+  opacity: 0;
+  pointer-events: none;
+}
+#guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #393433;
+}
+#guid_f3f5d84d_a751_490c_8752_ac5414c0e862 {
+  width: 348px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 727, 376);
+  opacity: 0;
+  pointer-events: none;
+}
+#guid_172c2329_e782_4e37_8d01_9ccf25981c2a {
+  width: 307px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -56.5, 583);
+  opacity: 0;
+  pointer-events: none;
+}
+#guid_3a0e59b9_0c44_40c4_b60e_038e362e947b {
+  width: 628px;
+  height: 834px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 645, 245.999755859375);
+}
+#guid_dd4d8be4_65fc_49b6_b544_d6cfd8235756 {
+  width: 628px;
+  height: 834px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1273, 245.99951171875);
+}
+#guid_995aa660_6ca9_44e4_9fc6_4aca219c755b {
+  width: 628px;
+  height: 834px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 18.000244140625, 245.999755859375);
+}
+#guid_b7dbecfe_85c1_4e73_92aa_4956d097a460 {
+  width: 500px;
+  height: 70px;
+  transform-origin: 50% 50%;
+  transform: matrix(6.123234262925839e-17, -1, 1, 6.123234262925839e-17, -186, 775);
+}
+#guid_2f408222_90c9_442d_a634_aa44e7b40b4c {
+  width: 387px;
+  height: 70px;
+  transform-origin: 50% 50%;
+  transform: matrix(6.123234262925839e-17, -1, 1, 6.123234262925839e-17, 504.5, 831.5);
+}
+#guid_03e02d7e_1c8c_4594_9b6f_915f0ff926db {
+  width: 469px;
+  height: 70px;
+  transform-origin: 50% 50%;
+  transform: matrix(6.123234262925839e-17, -1, 1, 6.123234262925839e-17, 1079.5, 790.5);
+}
+#guid_56f2eec2_78dc_41f9_ae3d_d8312d62d500 {
+  width: 333px;
+  height: 333px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1587, -47);
+}
+#guid_883b1639_65c4_468d_be1a_4b17401fae93 {
+  width: 613px;
+  font-family: Helvetica Neue;
+  font-size: 149px;
+  color: #039eff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -29);
+}
+#guid_ad1bb778_4390_4457_a4d0_781736cfffb3 {
+  width: 586px;
+  font-family: Helvetica Neue;
+  font-size: 110px;
+  color: #fff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 120);
+}
+#guid_c41c7e57_fb66_4648_b191_25fcd94c332b {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1286.692138671875, 40);
+}
+#guid_f94e80f3_6e9f_43b2_aa7d_5a2bf8803135 {
+  width: 78.398px;
+  height: 78.672px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  pointer-events: none;
+}
+#guid_c06b6671_8216_47e4_95d4_e4aab4afcfa7 {
+  width: 64.74px;
+  height: 64.74px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 6.965728759765625, 6.64703369140625);
+  pointer-events: none;
+}
+#guid_0e2d5977_362d_4f19_8290_0fb6d05d8e5b {
+  width: 0px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 32.59771728515625, 40.792724609375);
+  pointer-events: none;
+}
+#guid_e1144b15_0e56_41da_ae45_ee52c900bb23 {
+  width: 0px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 20.66949462890625, 35.42047119140625);
+  pointer-events: none;
+}
+#guid_34374496_657c_4437_b760_80f9fc36f2cf {
+  width: 39.753px;
+  height: 36.682px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 19.502471923828125, 20.9420166015625);
+  pointer-events: none;
+}
+#guid_6d14fe1a_2a9e_493b_8c2a_1d3062a89807 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1174.26025390625, 40);
+}
+#guid_82be1af4_3b4c_4465_90b5_9ad5b1cd5333 {
+  width: 78.672px;
+  height: 78.672px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  pointer-events: none;
+}
+#guid_fb2fde42_6b1b_4bb2_a968_ed349c036c60 {
+  width: 55.051px;
+  height: 45.359px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 13.551094055175781, 16.93885040283203);
+  pointer-events: none;
+}
+#guid_cfa6be6f_64c5_401f_b803_a9f87ab0d5a8 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1398.8509521484375, 40);
+}
+#guid_d8a4bf3d_f0c4_4daa_9f6a_ab290b6d338a {
+  width: 78.672px;
+  height: 78.672px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  pointer-events: none;
+}
+#guid_bc77c7fb_b21c_4154_bc3a_5c761d854966 {
+  width: 62.841px;
+  height: 62.841px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 8.094970703125, 8.155029296875);
+  pointer-events: none;
+}
+#guid_ce91618b_f175_4424_baa5_4f2a6291b9e9 {
+  width: 7.555px;
+  height: 7.555px;
+  border-radius: 50% 50%;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 52.46774673461914, 18.828418731689453);
+  background-color: #000;
+}
+#guid_35fe0740_aa63_43a7_b9c3_f6bdd0903f37 {
+  width: 32.38px;
+  height: 32.38px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23.3856201171875, 23.32568359375);
+  pointer-events: none;
+}
+#guid_4b4bfaeb_e4fb_49e9_ba1c_cca2e08746be {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1509.8817138671875, 40);
+}
+#guid_ab66b674_84b1_4102_80ab_ce8cd9136a93 {
+  width: 77.118px;
+  height: 78.672px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  pointer-events: none;
+}
+#guid_07ae6b9a_df7b_4685_a945_a43fcac4f42f {
+  width: 32.812px;
+  height: 67.025px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 32.22845458984375, 11.6466064453125);
+  pointer-events: none;
+}
+#guid_76a2f3c3_ecc0_43c9_b501_eea91d191063 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #393433;
+}
+#guid_489975cf_74cf_46ab_982a_d69d6fac1f26 {
+  width: 617px;
+  font-family: Helvetica Neue;
+  font-size: 150px;
+  color: #159eff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -29);
+}
+#guid_31989616_7ed4_448d_8287_a5d865d8404e {
+  width: 586px;
+  font-family: Helvetica Neue;
+  font-size: 110px;
+  color: #fff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 120);
+}
+#guid_b58e07f1_8d18_445c_98ea_633c243fbde8 {
+  width: 348px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 727, 376);
+  opacity: 0;
+  pointer-events: none;
+}
+#guid_6d792cdb_4519_4091_b03c_8460579a6489 {
+  width: 307px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -56.5, 583);
+  opacity: 0;
+  pointer-events: none;
+}
+#guid_f49c937e_a2f0_4ee0_948b_f7bd3d036f79 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 645, 245.999755859375);
+}
+#guid_af79b5c0_0c73_420d_b88f_df5de2959115 {
+  width: 627.99951171875px;
+  height: 834.0003662109375px;
+  transform-origin: 50% 50%;
+  transform: translate(0px, 0px);
+}
+#guid_6c6e7f13_2733_4660_999a_ef960f8b4857 {
+  width: 628px;
+  height: 834px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0.000244140625);
+  opacity: 0.32107099890708923;
+  background-color: #000;
+  border: 1px solid #707070;
+}
+#guid_69e5f31c_1678_42c2_8129_d8e88c465833 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1273, 245.99951171875);
+}
+#guid_b0330339_9eac_4e19_9fc4_4b51d906b986 {
+  width: 627.999755859375px;
+  height: 834.00048828125px;
+  transform-origin: 50% 50%;
+  transform: translate(0px, 0px);
+}
+#guid_8489583a_d4bf_4340_b79d_2d8b4500d442 {
+  width: 628px;
+  height: 834px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0.00048828125);
+  opacity: 0.42265498638153076;
+  background-color: #000;
+  border: 1px solid #707070;
+}
+#guid_d84eb91e_0d1a_4c9b_94ca_91c531c2749f {
+  width: 628.236px;
+  height: 834px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 246);
+}
+#guid_95d6e132_526b_40c2_a5b8_626e85a0f0fb {
+  width: 333px;
+  height: 333px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1587, -47);
+}
+#guid_d437f2ed_4a57_4cd8_882f_84e3b2bb50bc {
+  width: 73px;
+  font-family: Helvetica Neue;
+  font-size: 60px;
+  color: #fff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(0, -1, 1, 0, -186, 775);
+}
+#guid_2ec1fd28_a6bb_4b4f_be2d_407b6b9e56b8 {
+  width: 1920px;
+  height: 1080px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  background-color: #313030;
+  border: 1px solid #707070;
+}
+#guid_b7585a43_b619_4664_9646_fda213427499 {
+  width: 1923.132px;
+  height: 1081.762px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -0.000732421875);
+}
+#guid_ec9a402f_faa0_4a67_abdc_9b64237d199c {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 29, 38.564453125);
+  pointer-events: none;
+}
+#guid_bc92702a_1813_44b1_925d_1315308eacdf {
+  width: 1044px;
+  font-family: Helvetica Neue;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 64, 146);
+}
+#guid_1d513d11_0909_447c_8bb7_954103aa25cd {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #393433;
+}
+#guid_05a65e39_2c3f_427e_b15d_d5da9fa31e96 {
+  width: 617px;
+  font-family: Helvetica Neue;
+  font-size: 150px;
+  color: #159eff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -29);
+}
+#guid_8ac8e164_096f_4486_9d8f_c6fabef85764 {
+  width: 586px;
+  font-family: Helvetica Neue;
+  font-size: 110px;
+  color: #fff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 120);
+}
+#guid_de818f00_375a_4324_a10e_dd8cc924f3a4 {
+  width: 348px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 727, 376);
+  opacity: 0;
+  pointer-events: none;
+}
+#guid_57821f06_8491_4ad9_aece_e20413893f62 {
+  width: 307px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -56.5, 583);
+  opacity: 0;
+  pointer-events: none;
+}
+#guid_f9fde19a_8206_45ef_a4f3_d71575caf534 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1273, 245.99951171875);
+}
+#guid_f55ef330_e490_41e4_9e65_01b1a4ed5da7 {
+  width: 627.999755859375px;
+  height: 834.00048828125px;
+  transform-origin: 50% 50%;
+  transform: translate(0px, 0px);
+}
+#guid_7188e974_e303_4908_8756_6d3804e77ea2 {
+  width: 628px;
+  height: 834px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0.00048828125);
+  opacity: 0.42265498638153076;
+  background-color: #000;
+  border: 1px solid #707070;
+}
+#guid_7615e32b_9475_4424_8049_a133abe97b9b {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 17.763916015625, 246);
+}
+#guid_3725b10a_1e52_461c_a8c7_ace05c61cf4b {
+  width: 628.2359619140625px;
+  height: 834px;
+  transform-origin: 50% 50%;
+  transform: translate(0px, 0px);
+}
+#guid_232b508d_c18d_4075_8ab5_29dae963166b {
+  width: 628px;
+  height: 834px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 646, 246);
+}
+#guid_19c53f29_d9c9_4cde_a545_2d84a436daf7 {
+  width: 333px;
+  height: 333px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1587, -47);
+}
+#guid_bb944d9b_8b91_4420_aa9d_fb162b82049b {
+  width: 73px;
+  font-family: Helvetica Neue;
+  font-size: 60px;
+  color: #fff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(0, -1, 1, 0, 504.5, 831.5);
+}
+#guid_7c137cf3_5e30_41e3_a5c6_74df252ff0c8 {
+  width: 1920px;
+  height: 1247px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -70);
+}
+#guid_8380d7a1_480d_4a53_b958_2e04b9200ccf {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 29, 39.564453125);
+  pointer-events: none;
+}
+#guid_1ccde4db_af79_4c04_89ac_fe497fd67d00 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_40b35a4a_4b3c_4142_bf5c_8e52225da59c {
+  width: 316px;
+  height: 145px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1604, 935);
+  opacity: 0.2122420072555542;
+  background-color: #6f6f6f;
+  border: 1px solid #707070;
+  border-radius: 61px 61px 61px 61px;
+}
+#guid_b2adbdc2_4632_4f96_bb17_02d00bf3e747 {
+  width: 251px;
+  font-family: Helvetica Neue;
+  font-size: 53px;
+  color: #0058ff;
+  text-align: center;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1634, 943);
+}
+#guid_0016f738_42ca_4244_b6b3_38135437d9b4 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #393433;
+}
+#guid_1c1b1630_da8e_42a6_b9e6_a3ee571e1d77 {
+  width: 348px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 727, 376);
+  opacity: 0;
+  pointer-events: none;
+}
+#guid_b659396f_2005_48cd_acd2_8fb792d3405b {
+  width: 307px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -56.5, 583);
+  opacity: 0;
+  pointer-events: none;
+}
+#guid_b30d9673_0dd3_4465_8fa1_3abcea6cafa1 {
+  width: 628px;
+  height: 834px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 645, 245.999755859375);
+}
+#guid_ac652614_ae54_4f81_b2aa_bbd9271f0200 {
+  width: 628px;
+  height: 834px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1273, 245.99951171875);
+}
+#guid_3efefb02_59b6_4049_80e4_b2eaadea019b {
+  width: 628px;
+  height: 834px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 18.000244140625, 245.999755859375);
+}
+#guid_e3440075_0184_42ea_8388_fbecda755c63 {
+  width: 469px;
+  height: 70px;
+  transform-origin: 50% 50%;
+  transform: matrix(6.123234262925839e-17, -1, 1, 6.123234262925839e-17, 1079.5, 790.5);
+}
+#guid_b47f8fe0_9b28_455e_a595_a09cb72a7eb3 {
+  width: 333px;
+  height: 333px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1587, -47);
+}
+#guid_40ed8151_f81b_44e9_9cb4_622811feed9a {
+  width: 613px;
+  font-family: Helvetica Neue;
+  font-size: 149px;
+  color: #039eff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -29);
+}
+#guid_01c09d07_d7ee_4550_adcf_eac945d35b26 {
+  width: 586px;
+  font-family: Helvetica Neue;
+  font-size: 110px;
+  color: #fff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 120);
+}
+#guid_10558fc8_f751_4f80_9300_6e65661a87f7 {
+  width: 1937px;
+  height: 1088px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -8, 0);
+}
+#guid_25964297_ff3f_4814_9be2_b351b37d7ab4 {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 29, 37.564453125);
+  pointer-events: none;
+}
+#guid_0a9a66de_5215_4913_8a45_2bcbce6ea966 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_290b8654_6e68_48a7_92db_5e00a64c50a6 {
+  width: 126.778px;
+  height: 132.95px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 982.5302734375, 627.674072265625);
+  pointer-events: none;
+}
+#guid_86262f7f_a9ad_4d4c_b2af_147fcfb290d7 {
+  width: 252px;
+  height: 252px;
+  border-radius: 50% 50%;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 978, 508);
+  border: 10px solid #fff;
+}
+#guid_2bb1f944_b049_49d2_8d4b_db8b4008bfa9 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 679.7567138671875, 604.34521484375);
+}
+#guid_152b5b82_833b_45f4_a82b_f9f8fc2c0afc {
+  width: 147.692px;
+  height: 146.944px;
+  border-radius: 50% 50%;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 658.9291381835938, -3.0006103515625);
+  border: 10px solid #fff;
+}
+#guid_c8c1a0ea_6a60_4773_a267_53ed315b2127 {
+  width: 72.294px;
+  height: 75.813px;
+  transform-origin: 50% 50%;
+  transform: matrix(0.9993908405303955, 0.0348995067179203, -0.0348995067179203, 0.9993908405303955, 659.1800833445903, 67.2473361363025);
+  pointer-events: none;
+}
+#guid_29cb37b5_23b9_4a61_a1f0_027d65549039 {
+  width: 147.692px;
+  height: 146.944px;
+  border-radius: 50% 50%;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -195.0000457763672, -3.000561237335205);
+  border: 10px solid #fff;
+}
+#guid_b734aec8_f499_41ca_ae9e_2c1bcd3ddb4b {
+  width: 72.294px;
+  height: 75.813px;
+  transform-origin: 50% 50%;
+  transform: matrix(8.165814135985272e-10, -1, 1, 8.165814135985272e-10, -139.79636567744427, 70.24588775778454);
+  pointer-events: none;
+}
+#guid_3fdb1921_7b4d_466a_921c_ff72c4dc7ed1 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 683.2094116210938, 608.542236328125);
+}
+#guid_7932925e_543f_4bb9_9960_527e8244c516 {
+  width: 140.102px;
+  height: 140.102px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -195.0000457763672, -3.3560791015625);
+}
+#guid_7f6f9e9c_dbe2_49d2_b8f5_0c755484f466 {
+  width: 140.102px;
+  height: 140.102px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 657.9854125976562, -3.0006103515625);
+}
+#guid_aa204e89_10c0_47c4_92dd_793171299e57 {
+  width: 236.999px;
+  height: 237px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 986.00048828125, 515.0003662109375);
+}
+#guid_940bc082_f6b3_494f_a1d0_2227e6b0033e {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_8a23eb1f_bc77_4a43_ae1c_159605fabbc2 {
+  width: 274px;
+  height: 60px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 388, 540);
+  background-color: #bc9777;
+  border: 1px solid #707070;
+  border-radius: 33px 33px 33px 33px;
+}
+#guid_5c68d07d_1b33_46c0_9168_9ecc6ee2908a {
+  width: 240px;
+  font-family: Hoefler Text;
+  font-size: 30px;
+  color: #000;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 407, 558);
+}
+#guid_15a04258_9a62_4c8d_9a64_7eca84c2f089 {
+  width: 242px;
+  height: 60px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1379, 540);
+  background-color: #bfba88;
+  border: 1px solid #707070;
+  border-radius: 33px 33px 33px 33px;
+}
+#guid_b6b69183_f206_4c11_acc1_846c7e624da4 {
+  width: 208px;
+  font-family: Hoefler Text;
+  font-size: 30px;
+  color: #000;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1398, 558);
+}
+#guid_b2442b2f_197c_4782_8355_91c02c33f5d7 {
+  width: 170px;
+  height: 51px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1164, 577);
+  background-color: #9f8a79;
+  border: 1px solid #707070;
+  border-radius: 14px 14px 14px 14px;
+}
+#guid_9aac7962_4d83_4270_8ad1_53995ae93d52 {
+  width: 102px;
+  font-family: Hoefler Text;
+  font-size: 30px;
+  color: #000;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1199, 592);
+}
+#guid_a0db574a_9774_4faf_b8b0_6dbf97039cb2 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_f21bf3e5_9805_4fd3_b2c3_007d8d398a57 {
+  width: 1920px;
+  height: 1519px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -439);
+}
+#guid_702c0fd8_ac5b_4999_8016_8d680ffd9f26 {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 33, 38.564453125);
+  pointer-events: none;
+}
+#guid_4770cc3e_11a0_41a6_8a8c_f3f06d71eac5 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_2a9eb0de_cb44_4e2b_a1e4_7077c41ec5a3 {
+  width: 1776px;
+  height: 53px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 79, 913);
+  background-color: #030303;
+}
+#guid_1ce7d44d_43d7_44c9_b992_0dfdcef5c57e {
+  width: 1799px;
+  height: 53px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 66, 966);
+  background-color: #030303;
+}
+#guid_a0ce25bc_421a_4d31_b16e_7d53dbc85b38 {
+  width: 658px;
+  height: 53px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 632, 1019);
+  background-color: #030303;
+}
+#guid_425c3db8_243d_43af_90c7_714fa2bdbacd {
+  width: 1855px;
+  height: 167px;
+  font-family: Helvetica Neue;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 33, 913);
+}
+#guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #393433;
+}
+#guid_7b3fd2ec_986a_467d_8242_8130537a980f {
+  width: 784px;
+  height: 411px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_d50e0bef_af93_4e76_ab5c_2410642334f9 {
+  width: 588px;
+  height: 649px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 433);
+}
+#guid_b2507e64_6999_406b_b42b_c5acce4cdf16 {
+  width: 914px;
+  height: 647px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1006, 433);
+}
+#guid_0e47b870_f26c_46ac_a68d_c528d16083e7 {
+  width: 530px;
+  height: 412px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 807, 0);
+}
+#guid_4e5820fc_80e5_4807_bf4b_ac59d9f67b8d {
+  width: 694px;
+  height: 445px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1380, 0);
+}
+#guid_8c15200f_f39f_4d3c_a837_0588c9b42cfd {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_4817c975_44f9_4682_9457_4b40d03d5558 {
+  width: 301px;
+  height: 599px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 654, 481);
+  background-color: #342828;
+  border: 1px solid #707070;
+}
+#guid_0c546f50_1931_4492_b56d_495f7803a980 {
+  width: 59px;
+  height: 647px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 619, 433);
+  background-color: #fff;
+}
+#guid_afe79b93_3f2e_41c6_9a8a_dda0f634cb98 {
+  width: 306px;
+  height: 59px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 654, 433);
+  background-color: #fff;
+}
+#guid_78524df3_5277_4ae4_b083_2d9fcdef25af {
+  width: 59px;
+  height: 647px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 925, 433);
+  background-color: #fff;
+}
+#guid_54d08dea_2515_4fcd_a744_79d3d371f692 {
+  width: 128.383px;
+  height: 86.857px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 678, 491.8994140625);
+  pointer-events: none;
+}
+#guid_92af67be_74ce_453e_b46b_b5b220ad499e {
+  width: 158px;
+  font-family: Helvetica Neue;
+  font-size: 59px;
+  color: #fff;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 722, 739);
+}
+#guid_df75f654_3dc8_476f_86a7_8c824681d247 {
+  width: 128.383px;
+  height: 86.857px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 796.6171875, 491.8994140625);
+  pointer-events: none;
+}
+#guid_17f4c71c_52d1_47fe_b9be_4f1ea8d0170d {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_97ca3598_67bc_4b3c_bed0_66468681f5ca {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -75);
+}
+#guid_35986d33_8784_4562_bd9d_8351fbf69ee2 {
+  width: 2063px;
+  height: 1080px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 75);
+}
+#guid_4e2490df_029f_406c_9eae_33e2218bbbdf {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 17, 19);
+  pointer-events: none;
+}
+#guid_de286227_7f90_469e_86fb_0c79ea0de200 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_dee50845_6a4b_408e_ab26_90dd1c11f697 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -807, -0.0272216796875);
+}
+#guid_cf14d4de_b476_4c91_ad95_7c0e7d7ebcf0 {
+  width: 1920px;
+  height: 1490px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 807, 0.02722182124853134);
+}
+#guid_913530f3_508d_4f4a_b470_5effaedd0632 {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 14, 18);
+  pointer-events: none;
+}
+#guid_8a00533f_f3cf_4a6d_8401_6138b22b5df6 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_71e6cbed_38f8_4d11_811e_adf5503f09cd {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -1380, -39);
+}
+#guid_0edb9e2d_50d6_445a_8be0_a051ad8078eb {
+  width: 1920px;
+  height: 1159px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1380, 0);
+}
+#guid_4d072d1a_1e5d_4ed9_b902_b038e1029403 {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 15, 18);
+  pointer-events: none;
+}
+#guid_5659c73c_7a86_4234_b2a5_f01cf0d3dc00 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #393433;
+}
+#guid_aa32f578_f79e_4320_bf43_375580b4ec2e {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -469, -1468.302490234375);
+}
+#guid_69ad5cc6_076a_4907_adf2_238263dcfe99 {
+  width: 981px;
+  height: 1080px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 939, 1468.302490234375);
+}
+#guid_bd68566a_39d8_40b3_bd48_73d6a507b4c4 {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 29, 21);
+  pointer-events: none;
+}
+#guid_aa52cafa_e822_42c8_abdb_2a67ebdb7f05 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_8c5c1e12_bb93_45cf_93ff_92826e4f73d0 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -1006.1375732421875, -712.7377319335938);
+}
+#guid_81794e90_f17f_4b6c_8fda_9fcc01c7dff8 {
+  width: 1920px;
+  height: 1360px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1006.1376342773438, 432.7377624511719);
+}
+#guid_23cb327b_004f_433c_a232_1c833f01af44 {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 122, 17);
+  pointer-events: none;
+}
+#guid_efd3913d_4e14_464a_bea3_f8be0792e44e {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_4c8866cd_33f4_41ed_8470_353fa1afc66f {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_2af14ea9_d0fe_4857_997c_968ee24d9965 {
+  width: 1929px;
+  height: 2894px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_730fd68b_fe09_4018_a6cb_c4c1a5f4b6ee {
+  width: 794px;
+  height: 241.078px;
+  transform-origin: 50% 50%;
+  transform: matrix(0.9993908405303955, -0.03489949554204941, 0.03489949554204941, 0.9993908405303955, 1074.5427903711386, 1984.3239126022097);
+  background-color: #c0b6ad;
+  border: 1px solid #707070;
+  border-radius: 40px 40px 40px 40px;
+}
+#guid_78507281_1494_438f_b64d_c10dffa31e85 {
+  width: 785.856px;
+  font-family: Hoefler Text;
+  font-size: 30px;
+  color: #000;
+  text-align: center;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(0.9993908405303955, -0.03489949554204941, 0.03489949554204941, 0.9993908405303955, 1083.0002958195328, 2002.017309746895);
+}
+#guid_b919a662_9bf5_483e_a117_95e8462cc351 {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 38, 37.564453125);
+  pointer-events: none;
+}
+#guid_3f0d1079_6f14_4573_b3f8_7683067dc138 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_6e60fc9a_a206_4963_9e65_79e246b5a9c0 {
+  width: 1920px;
+  height: 1080px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_80056d01_a649_408f_9005_f2712cac2d04 {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 84, 37.564453125);
+  pointer-events: none;
+}
+#guid_b9bf3309_e897_492f_a365_9c70bd6b9417 {
+  width: 935px;
+  font-family: Hoefler Text;
+  font-size: 30px;
+  color: #000;
+  text-align: center;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 84, 337);
+}
+#guid_41204d75_00d3_4cee_8a78_abb3b84ad1ff {
+  width: 1087px;
+  font-family: Hoefler Text;
+  font-size: 29px;
+  color: #000;
+  text-align: center;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 25, 197);
+}
+#guid_1817c210_9ca3_458c_aede_9f28250e7c2c {
+  width: 1235px;
+  font-family: Hoefler Text;
+  font-size: 30px;
+  color: #000;
+  text-align: center;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 297, 39);
+}
+#guid_402a2627_30c0_471b_9f8e_9076b2d1192e {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_87e0770a_ee6e_4230_b134_31eb77ec00fd {
+  width: 1920px;
+  height: 1387px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -237);
+}
+#guid_43074ee7_c87f_4528_9538_ec363e1677f9 {
+  width: 607px;
+  font-family: Hoefler Text;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 100, 525);
+}
+#guid_cc7df519_f4f4_4f29_aaea_cf480cf6ffc2 {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 54, 28.564453125);
+  pointer-events: none;
+}
+#guid_5095a7d4_fa54_475d_8157_9956f002e8c4 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_c1bf024d_3132_457f_87f6_01cc49847fec {
+  width: 1920px;
+  height: 2561px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -1339);
+}
+#guid_4199014b_5b06_4a45_94ba_1d2321d2b07d {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 54, 38.564453125);
+  pointer-events: none;
+}
+#guid_d8036015_f010_4639_b3b0_d5a11bc45a4b {
+  width: 1355px;
+  font-family: Helvetica Neue;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 308, 956);
+}
+#guid_e8ac2b9a_4bf0_4bde_b449_ec8af7d46088 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_33ac74ab_9e37_49d0_8315_e86d425d9f93 {
+  width: 1920px;
+  height: 1537px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, -279);
+}
+#guid_18f09791_8793_497d_b48f_b72b63a1f15d {
+  width: 91.073px;
+  height: 79.436px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 66, 38.564453125);
+  pointer-events: none;
+}
+#guid_4dc41a3d_4db8_431c_aee4_64f2610cbe34 {
+  width: 1696px;
+  height: 156px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 157, 915);
+}
+
+      
+
+  </style>
+
+  
+
+        <!-- /////////////////////// -->
+        <!-- Player -->
+        <div class="wrapper" style="position: relative; width: 100%; height: 100%;">
+          <div id="player" class="fusion--player" style="width: 100%; height: 100%; ">
+            <div class="fusion--viewport">
+            
+            
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_f36b5a6f_a897_41ed_ba23_e12ed145c13d">
+              <div class="fusion--scene--content">
+                
+<div id="guid_f36b5a6f_a897_41ed_ba23_e12ed145c13d" class="artboard scene" >
+<div id="guid_16bf2ab1_a7ed_43d9_88c4_6b37ddf59d18" class="hero-element" >Welcome,
+</div>
+<div id="guid_1c23fbe1_3b95_46c4_8010_5524afdb7145" class="hero-element" >Vatican City
+</div>
+<img id="guid_16d18938_aa27_485b_b049_4d3f4b8acc31" class="hero-element" src="guid_16d18938_aa27_485b_b049_4d3f4b8acc31.png" hero-fx-magnet="{}" >
+
+<div id="guid_4d18d130_d440_4d50_a92d_28e88c8797bf" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_4d18d130_d440_4d50_a92d_28e88c8797bf-line"
+              x1="348" y1="0" x2="0" y2="0"
+              stroke="#707070"
+              stroke-width="5"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_9f4a83bf_9bbd_498f_a0fb_675e40a8923b" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_9f4a83bf_9bbd_498f_a0fb_675e40a8923b-line"
+              x1="0" y1="0" x2="307" y2="0"
+              stroke="#707070"
+              stroke-width="5"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e">
+              <div class="fusion--scene--content">
+                
+<div id="guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e" class="artboard scene" >
+<div id="guid_f3f5d84d_a751_490c_8752_ac5414c0e862" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_f3f5d84d_a751_490c_8752_ac5414c0e862-line"
+              x1="348" y1="0" x2="0" y2="0"
+              stroke="#fff"
+              stroke-width="5"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_172c2329_e782_4e37_8d01_9ccf25981c2a" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_172c2329_e782_4e37_8d01_9ccf25981c2a-line"
+              x1="0" y1="0" x2="307" y2="0"
+              stroke="#fff"
+              stroke-width="5"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<img id="guid_3a0e59b9_0c44_40c4_b60e_038e362e947b" class="hero-element" src="guid_3a0e59b9_0c44_40c4_b60e_038e362e947b.png" hero-fx-magnet="{}" >
+
+<img id="guid_dd4d8be4_65fc_49b6_b544_d6cfd8235756" class="hero-element" src="guid_dd4d8be4_65fc_49b6_b544_d6cfd8235756.png" hero-fx-magnet="{}" >
+
+<img id="guid_995aa660_6ca9_44e4_9fc6_4aca219c755b" class="hero-element" src="guid_995aa660_6ca9_44e4_9fc6_4aca219c755b.png" hero-fx-magnet="{}" >
+
+<img id="guid_b7dbecfe_85c1_4e73_92aa_4956d097a460" class="hero-element" src="guid_b7dbecfe_85c1_4e73_92aa_4956d097a460.png" >
+
+<img id="guid_2f408222_90c9_442d_a634_aa44e7b40b4c" class="hero-element" src="guid_2f408222_90c9_442d_a634_aa44e7b40b4c.png" >
+
+<img id="guid_03e02d7e_1c8c_4594_9b6f_915f0ff926db" class="hero-element" src="guid_03e02d7e_1c8c_4594_9b6f_915f0ff926db.png" >
+
+<img id="guid_56f2eec2_78dc_41f9_ae3d_d8312d62d500" class="hero-element" src="guid_56f2eec2_78dc_41f9_ae3d_d8312d62d500.png" >
+
+<div id="guid_883b1639_65c4_468d_be1a_4b17401fae93" class="hero-element" >Discover,
+</div>
+<div id="guid_ad1bb778_4390_4457_a4d0_781736cfffb3" class="hero-element" >Vatican City
+</div>
+<div id="guid_c41c7e57_fb66_4648_b191_25fcd94c332b" class="hero-element" >
+<div id="guid_f94e80f3_6e9f_43b2_aa7d_5a2bf8803135" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -217.5px; top: -647px;">
+        <path id="guid_f94e80f3_6e9f_43b2_aa7d_5a2bf8803135-path" d="M 238.154 720.254 C 243.713 723.302 250.095 725.034 256.881 725.034 C 278.430 725.034 295.898 707.566 295.898 686.017 C 295.898 664.469 278.430 647 256.881 647 C 235.333 647 217.864 664.469 217.864 686.017 C 217.864 693.088 219.745 699.719 223.034 705.438 L 223.054 705.458 L 217.500 725.672 L 238.170 720.299" fill="#fff"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_c06b6671_8216_47e4_95d4_e4aab4afcfa7" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -294px; top: -720px;">
+        <path id="guid_c06b6671_8216_47e4_95d4_e4aab4afcfa7-path" d="M 326.370 720 C 308.493 720 294 734.493 294 752.370 C 294 759.179 296.102 765.497 299.693 770.710 L 296.413 782.737 L 308.763 779.537 C 313.831 782.828 319.877 784.740 326.370 784.740 C 344.248 784.740 358.740 770.248 358.740 752.370 C 358.740 734.493 344.248 720 326.370 720 Z" fill="#000"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_0e2d5977_362d_4f19_8290_0fb6d05d8e5b" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -575.5px; top: -1095px;">
+        <path id="guid_0e2d5977_362d_4f19_8290_0fb6d05d8e5b-path" d="M 575.500 1095" fill="undefined" stroke="#000" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_e1144b15_0e56_41da_ae45_ee52c900bb23" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -444.5px; top: -1036px;">
+        <path id="guid_e1144b15_0e56_41da_ae45_ee52c900bb23-path" d="M 444.500 1036" fill="undefined" stroke="#000" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_34374496_657c_4437_b760_80f9fc36f2cf" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -431.68328857421875px; top: -876.9927978515625px;">
+        <path id="guid_34374496_657c_4437_b760_80f9fc36f2cf-path" d="M 457.708 913.051 C 463.148 914.449 466.996 913.416 469.454 910.775 C 471.274 908.820 471.490 906.247 471.427 905.037 C 471.406 904.645 471.218 904.282 470.911 904.037 L 470.911 904.037 L 462.615 899.888 C 461.930 899.546 461.100 899.728 460.621 900.325 L 457.391 904.347 C 457.432 904.313 456.501 906.257 449.663 901.437 C 448.461 900.590 447.347 899.626 446.338 898.556 C 444.235 896.326 440.857 892.385 442.150 891.302 L 444.433 888.630 C 445.091 887.861 445.254 886.785 444.854 885.855 L 441.569 878.212 C 441.251 877.473 440.524 876.993 439.719 876.993 L 437.624 876.993 C 437.624 876.993 436.549 876.943 435.673 877.722 C 433.215 879.907 429.390 884.733 433.488 892.837 C 433.488 892.837 435.012 895.909 438.223 899.939 C 441.847 904.489 447.783 910.502 457.708 913.051 Z" fill="#fff"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+<div id="guid_6d14fe1a_2a9e_493b_8c2a_1d3062a89807" class="hero-element" >
+<div id="guid_82be1af4_3b4c_4465_90b5_9ad5b1cd5333" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: 0px; top: 0px;">
+        <path id="guid_82be1af4_3b4c_4465_90b5_9ad5b1cd5333-path" d="M 66.327 0 L 12.345 0 C 8.950 0 5.864 1.389 3.626 3.626 C 1.389 5.864 0 8.950 0 12.345 L 0 66.327 C 0 69.722 1.389 72.808 3.626 75.045 C 5.864 77.283 8.950 78.672 12.345 78.672 L 66.327 78.672 C 69.446 78.672 72.305 77.499 74.484 75.573 C 77.048 73.307 78.672 69.997 78.672 66.327 L 78.672 12.345 C 78.672 8.504 76.894 5.058 74.121 2.790 C 71.992 1.048 69.276 0 66.327 0 Z" fill="#fff"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_fb2fde42_6b1b_4bb2_a968_ed349c036c60" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -104.55500793457031px; top: -130.69366455078125px;">
+        <path id="guid_fb2fde42_6b1b_4bb2_a968_ed349c036c60-path" d="M 154.185 141.916 C 154.185 141.916 159.974 137.552 159.588 136.280 C 159.588 136.280 157.735 137.280 153.953 137.643 C 153.953 137.643 158.276 134.371 158.121 131.734 C 158.121 131.734 155.420 133.825 151.252 134.371 C 151.252 134.371 143.070 126.098 134.426 134.371 C 134.426 134.371 129.949 138.825 131.724 144.734 C 131.724 144.734 117.985 144.825 108.414 133.007 C 108.414 133.007 107.264 133.408 106.768 136.485 C 106.232 139.802 107.021 143.246 108.954 145.739 C 109.573 146.538 110.340 147.314 111.282 147.962 C 111.282 147.962 108.931 147.680 106.578 146.644 C 106.578 146.644 105.867 155.553 115.438 158.189 L 110.445 158.189 C 110.445 158.189 112.659 165.826 120.841 166.190 C 120.841 166.190 115.978 171.281 104.555 170.826 C 104.555 170.826 108.877 175.190 120.069 175.917 C 120.069 175.917 129.640 177.372 139.906 170.735 C 139.906 170.735 155.034 161.099 154.185 141.916 Z" fill="#000"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+<div id="guid_cfa6be6f_64c5_401f_b803_a9f87ab0d5a8" class="hero-element" >
+<div id="guid_d8a4bf3d_f0c4_4daa_9f6a_ab290b6d338a" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: 1686.5px; top: -1567.5px;">
+        <path id="guid_d8a4bf3d_f0c4_4daa_9f6a_ab290b6d338a-path" d="M -1622.857 1646.172 L -1671.471 1646.172 C -1675.621 1646.172 -1679.378 1644.490 -1682.098 1641.770 C -1684.818 1639.050 -1686.500 1635.293 -1686.500 1631.143 L -1686.500 1582.529 C -1686.500 1578.598 -1684.991 1575.020 -1682.520 1572.341 C -1679.774 1569.365 -1675.840 1567.500 -1671.471 1567.500 L -1622.857 1567.500 C -1619.226 1567.500 -1615.896 1568.788 -1613.298 1570.932 C -1609.958 1573.688 -1607.828 1577.860 -1607.828 1582.529 L -1607.828 1631.143 C -1607.828 1635.236 -1609.465 1638.947 -1612.119 1641.658 C -1614.847 1644.443 -1618.650 1646.172 -1622.857 1646.172 Z" fill="#fff"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_bc77c7fb_b21c_4154_bc3a_5c761d854966" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: 1551.5px; top: -1703.5px;">
+        <path id="guid_bc77c7fb_b21c_4154_bc3a_5c761d854966-path" d="M -1506.561 1703.500 L -1533.597 1703.500 C -1543.485 1703.500 -1551.500 1711.515 -1551.500 1721.403 L -1551.500 1748.438 C -1551.500 1758.326 -1543.485 1766.341 -1533.597 1766.341 L -1506.561 1766.341 C -1496.674 1766.341 -1488.659 1758.326 -1488.659 1748.438 L -1488.659 1721.403 C -1488.659 1711.515 -1496.674 1703.500 -1506.561 1703.500 Z M -1494.415 1747.813 C -1494.895 1755.368 -1498.313 1760.585 -1508.746 1760.525 L -1521.758 1760.585 L -1533.391 1760.465 C -1540.587 1760.405 -1545.564 1755.520 -1545.564 1748.712 L -1545.786 1733.711 L -1545.744 1725.626 C -1545.744 1725.077 -1545.656 1721.910 -1545.624 1721.369 C -1545.144 1713.274 -1540.527 1709.256 -1532.012 1709.256 L -1508.446 1709.256 C -1502.043 1709.256 -1494.415 1711.175 -1494.415 1722.928 L -1494.415 1747.813 Z" fill="#000"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_ce91618b_f175_4424_baa5_4f2a6291b9e9" class="hero-element" >
+</div>
+<div id="guid_35fe0740_aa63_43a7_b9c3_f6bdd0903f37" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: 1296.5px; top: -1956.4998779296875px;">
+        <path id="guid_35fe0740_aa63_43a7_b9c3_f6bdd0903f37-path" d="M -1280.310 1956.500 C -1289.251 1956.500 -1296.500 1963.748 -1296.500 1972.690 C -1296.500 1981.632 -1289.251 1988.880 -1280.310 1988.880 C -1271.368 1988.880 -1264.120 1981.632 -1264.120 1972.690 C -1264.120 1963.748 -1271.368 1956.500 -1280.310 1956.500 Z M -1280.280 1983.303 C -1286.125 1983.303 -1290.863 1978.565 -1290.863 1972.720 C -1290.863 1966.875 -1286.125 1962.136 -1280.280 1962.136 C -1274.435 1962.136 -1269.696 1966.875 -1269.696 1972.720 C -1269.696 1978.565 -1274.435 1983.303 -1280.280 1983.303 Z" fill="#000"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+<div id="guid_4b4bfaeb_e4fb_49e9_ba1c_cca2e08746be" class="hero-element" >
+<div id="guid_ab66b674_84b1_4102_80ab_ce8cd9136a93" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -190px; top: -1800px;">
+        <path id="guid_ab66b674_84b1_4102_80ab_ce8cd9136a93-path" d="M 260.591 1878.672 L 196.527 1878.672 C 194.725 1878.672 193.093 1877.926 191.912 1876.721 C 190.731 1875.516 190 1873.852 190 1872.013 L 190 1806.659 C 190 1804.886 190.679 1803.276 191.786 1802.083 C 192.975 1800.800 194.660 1800 196.527 1800 L 260.591 1800 C 262.333 1800 263.915 1800.696 265.085 1801.830 C 266.338 1803.043 267.118 1804.758 267.118 1806.659 L 267.118 1872.013 C 267.118 1873.852 266.388 1875.516 265.206 1876.721 C 264.025 1877.926 262.393 1878.672 260.591 1878.672 Z" fill="#000"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_07ae6b9a_df7b_4685_a945_a43fcac4f42f" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -794.2459716796875px; top: -2018.3599853515625px;">
+        <path id="guid_07ae6b9a_df7b_4685_a945_a43fcac4f42f-path" d="M 827.058 2030.018 C 827.058 2030.018 819.546 2028.869 816.881 2031.588 C 815.454 2033.043 814.639 2032.948 814.639 2042.650 L 827.058 2042.650 L 827.058 2054.028 L 814.639 2054.028 L 814.635 2085.385 L 802.532 2085.385 L 802.532 2054.034 L 794.246 2054.034 L 794.246 2042.490 L 802.532 2042.490 C 802.532 2042.490 801.364 2028.560 807.967 2022.442 C 812.411 2018.324 819.053 2018.116 827.058 2018.486" fill="#fff"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_76a2f3c3_ecc0_43c9_b501_eea91d191063">
+              <div class="fusion--scene--content">
+                
+<div id="guid_76a2f3c3_ecc0_43c9_b501_eea91d191063" class="artboard scene" >
+<div id="guid_489975cf_74cf_46ab_982a_d69d6fac1f26" class="hero-element" >Discover,<br/>
+</div>
+<div id="guid_31989616_7ed4_448d_8287_a5d865d8404e" class="hero-element" >Vatican City
+</div>
+<div id="guid_b58e07f1_8d18_445c_98ea_633c243fbde8" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_b58e07f1_8d18_445c_98ea_633c243fbde8-line"
+              x1="348" y1="0" x2="0" y2="0"
+              stroke="#fff"
+              stroke-width="5"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_6d792cdb_4519_4091_b03c_8460579a6489" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_6d792cdb_4519_4091_b03c_8460579a6489-line"
+              x1="0" y1="0" x2="307" y2="0"
+              stroke="#fff"
+              stroke-width="5"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_f49c937e_a2f0_4ee0_948b_f7bd3d036f79" class="hero-element" >
+<img id="guid_af79b5c0_0c73_420d_b88f_df5de2959115" class="hero-element" src="guid_af79b5c0_0c73_420d_b88f_df5de2959115.jpg" >
+
+<div id="guid_6c6e7f13_2733_4660_999a_ef960f8b4857" class="hero-element" >
+</div>
+</div>
+<div id="guid_69e5f31c_1678_42c2_8129_d8e88c465833" class="hero-element" >
+<img id="guid_b0330339_9eac_4e19_9fc4_4b51d906b986" class="hero-element" src="guid_b0330339_9eac_4e19_9fc4_4b51d906b986.png" >
+
+<div id="guid_8489583a_d4bf_4340_b79d_2d8b4500d442" class="hero-element" >
+</div>
+</div>
+<img id="guid_d84eb91e_0d1a_4c9b_94ca_91c531c2749f" class="hero-element" src="guid_d84eb91e_0d1a_4c9b_94ca_91c531c2749f.png" >
+
+<img id="guid_95d6e132_526b_40c2_a5b8_626e85a0f0fb" class="hero-element" src="guid_95d6e132_526b_40c2_a5b8_626e85a0f0fb.png" >
+
+<div id="guid_d437f2ed_4a57_4cd8_882f_84e3b2bb50bc" class="hero-element" >St. Peter’s Basilica
+</div>
+<div id="guid_2ec1fd28_a6bb_4b4f_be2d_407b6b9e56b8" class="hero-element" >
+</div>
+<img id="guid_b7585a43_b619_4664_9646_fda213427499" class="hero-element" src="guid_b7585a43_b619_4664_9646_fda213427499.png" >
+
+<div id="guid_ec9a402f_faa0_4a67_abdc_9b64237d199c" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_ec9a402f_faa0_4a67_abdc_9b64237d199c-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_bc92702a_1813_44b1_925d_1315308eacdf" class="hero-element" >St. Peter’s Basilica is one of the four Major Basilicas of Rome, and only papal <br/>basilica in the Vatican City. 
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_1d513d11_0909_447c_8bb7_954103aa25cd">
+              <div class="fusion--scene--content">
+                
+<div id="guid_1d513d11_0909_447c_8bb7_954103aa25cd" class="artboard scene" >
+<div id="guid_05a65e39_2c3f_427e_b15d_d5da9fa31e96" class="hero-element" >Discover,<br/>
+</div>
+<div id="guid_8ac8e164_096f_4486_9d8f_c6fabef85764" class="hero-element" >Vatican City
+</div>
+<div id="guid_de818f00_375a_4324_a10e_dd8cc924f3a4" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_de818f00_375a_4324_a10e_dd8cc924f3a4-line"
+              x1="348" y1="0" x2="0" y2="0"
+              stroke="#fff"
+              stroke-width="5"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_57821f06_8491_4ad9_aece_e20413893f62" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_57821f06_8491_4ad9_aece_e20413893f62-line"
+              x1="0" y1="0" x2="307" y2="0"
+              stroke="#fff"
+              stroke-width="5"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_f9fde19a_8206_45ef_a4f3_d71575caf534" class="hero-element" >
+<img id="guid_f55ef330_e490_41e4_9e65_01b1a4ed5da7" class="hero-element" src="guid_f55ef330_e490_41e4_9e65_01b1a4ed5da7.png" >
+
+<div id="guid_7188e974_e303_4908_8756_6d3804e77ea2" class="hero-element" >
+</div>
+</div>
+<div id="guid_7615e32b_9475_4424_8049_a133abe97b9b" class="hero-element" >
+<img id="guid_3725b10a_1e52_461c_a8c7_ace05c61cf4b" class="hero-element" src="guid_3725b10a_1e52_461c_a8c7_ace05c61cf4b.png" >
+
+</div>
+<img id="guid_232b508d_c18d_4075_8ab5_29dae963166b" class="hero-element" src="guid_232b508d_c18d_4075_8ab5_29dae963166b.png" >
+
+<img id="guid_19c53f29_d9c9_4cde_a545_2d84a436daf7" class="hero-element" src="guid_19c53f29_d9c9_4cde_a545_2d84a436daf7.png" >
+
+<div id="guid_bb944d9b_8b91_4420_aa9d_fb162b82049b" class="hero-element" >Sistine Chapel
+</div>
+<img id="guid_7c137cf3_5e30_41e3_a5c6_74df252ff0c8" class="hero-element" src="guid_7c137cf3_5e30_41e3_a5c6_74df252ff0c8.png" >
+
+<div id="guid_8380d7a1_480d_4a53_b958_2e04b9200ccf" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_8380d7a1_480d_4a53_b958_2e04b9200ccf-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_1ccde4db_af79_4c04_89ac_fe497fd67d00" class="hero-element" >
+<div id="guid_40b35a4a_4b3c_4142_bf5c_8e52225da59c" class="hero-element" >
+</div>
+<div id="guid_b2adbdc2_4632_4f96_bb17_02d00bf3e747" class="hero-element" >View the<br/>Art Gallery
+</div>
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_0016f738_42ca_4244_b6b3_38135437d9b4">
+              <div class="fusion--scene--content">
+                
+<div id="guid_0016f738_42ca_4244_b6b3_38135437d9b4" class="artboard scene" >
+<div id="guid_1c1b1630_da8e_42a6_b9e6_a3ee571e1d77" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_1c1b1630_da8e_42a6_b9e6_a3ee571e1d77-line"
+              x1="348" y1="0" x2="0" y2="0"
+              stroke="#fff"
+              stroke-width="5"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_b659396f_2005_48cd_acd2_8fb792d3405b" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_b659396f_2005_48cd_acd2_8fb792d3405b-line"
+              x1="0" y1="0" x2="307" y2="0"
+              stroke="#fff"
+              stroke-width="5"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<img id="guid_b30d9673_0dd3_4465_8fa1_3abcea6cafa1" class="hero-element" src="guid_b30d9673_0dd3_4465_8fa1_3abcea6cafa1.png" >
+
+<img id="guid_ac652614_ae54_4f81_b2aa_bbd9271f0200" class="hero-element" src="guid_ac652614_ae54_4f81_b2aa_bbd9271f0200.png" >
+
+<img id="guid_3efefb02_59b6_4049_80e4_b2eaadea019b" class="hero-element" src="guid_3efefb02_59b6_4049_80e4_b2eaadea019b.png" >
+
+<img id="guid_e3440075_0184_42ea_8388_fbecda755c63" class="hero-element" src="guid_e3440075_0184_42ea_8388_fbecda755c63.png" >
+
+<img id="guid_b47f8fe0_9b28_455e_a595_a09cb72a7eb3" class="hero-element" src="guid_b47f8fe0_9b28_455e_a595_a09cb72a7eb3.png" >
+
+<div id="guid_40ed8151_f81b_44e9_9cb4_622811feed9a" class="hero-element" >Discover,<br/>
+</div>
+<div id="guid_01c09d07_d7ee_4550_adcf_eac945d35b26" class="hero-element" >Vatican City
+</div>
+<img id="guid_10558fc8_f751_4f80_9300_6e65661a87f7" class="hero-element" src="guid_10558fc8_f751_4f80_9300_6e65661a87f7.png" >
+
+<div id="guid_25964297_ff3f_4814_9be2_b351b37d7ab4" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_25964297_ff3f_4814_9be2_b351b37d7ab4-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_0a9a66de_5215_4913_8a45_2bcbce6ea966" class="hero-element" >
+<div id="guid_290b8654_6e68_48a7_92db_5e00a64c50a6" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -6928.5302734375px; top: -1814.674072265625px;">
+        <path id="guid_290b8654_6e68_48a7_92db_5e00a64c50a6-path" d="M 7055.309 1940.003 C 6951.702 1930.528 6928.530 1947.624 6928.530 1947.624 C 6928.530 1947.624 6940.315 1947.812 6934.174 1844.451 C 6928.032 1741.089 7055.309 1940.003 7055.309 1940.003 Z" fill="#fff"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_86262f7f_a9ad_4d4c_b2af_147fcfb290d7" class="hero-element" >
+</div>
+</div>
+<div id="guid_2bb1f944_b049_49d2_8d4b_db8b4008bfa9" class="hero-element" >
+<div id="guid_152b5b82_833b_45f4_a82b_f9f8fc2c0afc" class="hero-element" >
+</div>
+<div id="guid_c8c1a0ea_6a60_4773_a267_53ed315b2127" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -1.6938429325819016e-7px; top: 0.0000019073486328125px;">
+        <path id="guid_c8c1a0ea_6a60_4773_a267_53ed315b2127-path" d="M 72.294 71.468 C 13.214 66.065 1.694e-07 75.813 1.694e-07 75.813 C 1.694e-07 75.813 6.721 75.920 3.218 16.980 C -0.284 -41.961 72.294 71.468 72.294 71.468 Z" fill="#fff"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_29cb37b5_23b9_4a61_a1f0_027d65549039" class="hero-element" >
+</div>
+<div id="guid_b734aec8_f499_41ca_ae9e_2c1bcd3ddb4b" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: 0px; top: 0.0000019073486328125px;">
+        <path id="guid_b734aec8_f499_41ca_ae9e_2c1bcd3ddb4b-path" d="M 72.294 71.468 C 13.214 66.065 0 75.813 0 75.813 C 0 75.813 6.721 75.920 3.218 16.980 C -0.284 -41.961 72.294 71.468 72.294 71.468 Z" fill="#fff"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+<div id="guid_3fdb1921_7b4d_466a_921c_ff72c4dc7ed1" class="hero-element" >
+<img id="guid_7932925e_543f_4bb9_9960_527e8244c516" class="hero-element" src="guid_7932925e_543f_4bb9_9960_527e8244c516.png" hero-fx-magnet="{}" >
+
+<img id="guid_7f6f9e9c_dbe2_49d2_b8f5_0c755484f466" class="hero-element" src="guid_7f6f9e9c_dbe2_49d2_b8f5_0c755484f466.png" hero-fx-magnet="{}" >
+
+</div>
+<img id="guid_aa204e89_10c0_47c4_92dd_793171299e57" class="hero-element" src="guid_aa204e89_10c0_47c4_92dd_793171299e57.png" hero-fx-magnet="{}" >
+
+<div id="guid_940bc082_f6b3_494f_a1d0_2227e6b0033e" class="hero-element" >
+<div id="guid_8a23eb1f_bc77_4a43_ae1c_159605fabbc2" class="hero-element" >
+</div>
+<div id="guid_5c68d07d_1b33_46c0_9168_9ecc6ee2908a" class="hero-element" >Maderno Fountain
+</div>
+<div id="guid_15a04258_9a62_4c8d_9a64_7eca84c2f089" class="hero-element" >
+</div>
+<div id="guid_b6b69183_f206_4c11_acc1_846c7e624da4" class="hero-element" >Benini Fountain
+</div>
+<div id="guid_b2442b2f_197c_4782_8355_91c02c33f5d7" class="hero-element" >
+</div>
+<div id="guid_9aac7962_4d83_4270_8ad1_53995ae93d52" class="hero-element" >Obelisk
+</div>
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_a0db574a_9774_4faf_b8b0_6dbf97039cb2">
+              <div class="fusion--scene--content">
+                
+<div id="guid_a0db574a_9774_4faf_b8b0_6dbf97039cb2" class="artboard scene" >
+<img id="guid_f21bf3e5_9805_4fd3_b2c3_007d8d398a57" class="hero-element" src="guid_f21bf3e5_9805_4fd3_b2c3_007d8d398a57.png" >
+
+<div id="guid_702c0fd8_ac5b_4999_8016_8d680ffd9f26" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_702c0fd8_ac5b_4999_8016_8d680ffd9f26-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_4770cc3e_11a0_41a6_8a8c_f3f06d71eac5" class="hero-element" >
+<div id="guid_2a9eb0de_cb44_4e2b_a1e4_7077c41ec5a3" class="hero-element" >
+</div>
+<div id="guid_1ce7d44d_43d7_44c9_b992_0dfdcef5c57e" class="hero-element" >
+</div>
+<div id="guid_a0ce25bc_421a_4d31_b16e_7d53dbc85b38" class="hero-element" >
+</div>
+</div>
+<div id="guid_425c3db8_243d_43af_90c7_714fa2bdbacd" class="hero-element" >The cupola was designed by Michelangelo who worked on the basilica's construction beginning in 1547. On Michelangelo's death in 1564, his pupil Giacomo Della Porta took over the direction of the work, completing the dome in 1590.
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2">
+              <div class="fusion--scene--content">
+                
+<div id="guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2" class="artboard scene" >
+<img id="guid_7b3fd2ec_986a_467d_8242_8130537a980f" class="hero-element" src="guid_7b3fd2ec_986a_467d_8242_8130537a980f.png" hero-fx-magnet="{}" >
+
+<img id="guid_d50e0bef_af93_4e76_ab5c_2410642334f9" class="hero-element" src="guid_d50e0bef_af93_4e76_ab5c_2410642334f9.png" hero-fx-magnet="{}" >
+
+<img id="guid_b2507e64_6999_406b_b42b_c5acce4cdf16" class="hero-element" src="guid_b2507e64_6999_406b_b42b_c5acce4cdf16.png" hero-fx-magnet="{}" >
+
+<img id="guid_0e47b870_f26c_46ac_a68d_c528d16083e7" class="hero-element" src="guid_0e47b870_f26c_46ac_a68d_c528d16083e7.png" hero-fx-magnet="{}" >
+
+<img id="guid_4e5820fc_80e5_4807_bf4b_ac59d9f67b8d" class="hero-element" src="guid_4e5820fc_80e5_4807_bf4b_ac59d9f67b8d.png" hero-fx-magnet="{}" >
+
+<div id="guid_8c15200f_f39f_4d3c_a837_0588c9b42cfd" class="hero-element" >
+<div id="guid_4817c975_44f9_4682_9457_4b40d03d5558" class="hero-element" >
+</div>
+<div id="guid_0c546f50_1931_4492_b56d_495f7803a980" class="hero-element" >
+</div>
+<div id="guid_afe79b93_3f2e_41c6_9a8a_dda0f634cb98" class="hero-element" >
+</div>
+<div id="guid_78524df3_5277_4ae4_b083_2d9fcdef25af" class="hero-element" >
+</div>
+<div id="guid_54d08dea_2515_4fcd_a744_79d3d371f692" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -8625.9990234375px; top: -502.0504455566406px;">
+        <path id="guid_54d08dea_2515_4fcd_a744_79d3d371f692-path" d="M 8754.382 502.050 C 8703.991 502.050 8673.377 515.126 8654.661 531.232 C 8625.441 556.376 8626 588.907 8626 588.907 L 8626 502.050 L 8754.382 502.050 Z" fill="#fff"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_92af67be_74ce_453e_b46b_b5b220ad499e" class="hero-element" >return
+</div>
+<div id="guid_df75f654_3dc8_476f_86a7_8c824681d247" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -8625.9990234375px; top: -502.050537109375px;">
+        <path id="guid_df75f654_3dc8_476f_86a7_8c824681d247-path" d="M 8625.999 502.051 C 8676.390 502.051 8707.004 515.126 8725.720 531.232 C 8754.939 556.376 8754.381 588.907 8754.381 588.907 L 8754.381 502.051 L 8625.999 502.051 Z" fill="#fff"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_17f4c71c_52d1_47fe_b9be_4f1ea8d0170d">
+              <div class="fusion--scene--content">
+                
+<div id="guid_17f4c71c_52d1_47fe_b9be_4f1ea8d0170d" class="artboard scene" >
+<div id="guid_97ca3598_67bc_4b3c_bed0_66468681f5ca" class="hero-element" >
+<img id="guid_35986d33_8784_4562_bd9d_8351fbf69ee2" class="hero-element" src="guid_35986d33_8784_4562_bd9d_8351fbf69ee2.png" >
+
+</div>
+<div id="guid_4e2490df_029f_406c_9eae_33e2218bbbdf" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_4e2490df_029f_406c_9eae_33e2218bbbdf-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_de286227_7f90_469e_86fb_0c79ea0de200">
+              <div class="fusion--scene--content">
+                
+<div id="guid_de286227_7f90_469e_86fb_0c79ea0de200" class="artboard scene" >
+<div id="guid_dee50845_6a4b_408e_ab26_90dd1c11f697" class="hero-element" >
+<img id="guid_cf14d4de_b476_4c91_ad95_7c0e7d7ebcf0" class="hero-element" src="guid_cf14d4de_b476_4c91_ad95_7c0e7d7ebcf0.png" >
+
+</div>
+<div id="guid_913530f3_508d_4f4a_b470_5effaedd0632" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_913530f3_508d_4f4a_b470_5effaedd0632-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_8a00533f_f3cf_4a6d_8401_6138b22b5df6">
+              <div class="fusion--scene--content">
+                
+<div id="guid_8a00533f_f3cf_4a6d_8401_6138b22b5df6" class="artboard scene" >
+<div id="guid_71e6cbed_38f8_4d11_811e_adf5503f09cd" class="hero-element" >
+<img id="guid_0edb9e2d_50d6_445a_8be0_a051ad8078eb" class="hero-element" src="guid_0edb9e2d_50d6_445a_8be0_a051ad8078eb.png" >
+
+</div>
+<div id="guid_4d072d1a_1e5d_4ed9_b902_b038e1029403" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_4d072d1a_1e5d_4ed9_b902_b038e1029403-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_5659c73c_7a86_4234_b2a5_f01cf0d3dc00">
+              <div class="fusion--scene--content">
+                
+<div id="guid_5659c73c_7a86_4234_b2a5_f01cf0d3dc00" class="artboard scene" >
+<div id="guid_aa32f578_f79e_4320_bf43_375580b4ec2e" class="hero-element" >
+<img id="guid_69ad5cc6_076a_4907_adf2_238263dcfe99" class="hero-element" src="guid_69ad5cc6_076a_4907_adf2_238263dcfe99.png" >
+
+</div>
+<div id="guid_bd68566a_39d8_40b3_bd48_73d6a507b4c4" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_bd68566a_39d8_40b3_bd48_73d6a507b4c4-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_aa52cafa_e822_42c8_abdb_2a67ebdb7f05">
+              <div class="fusion--scene--content">
+                
+<div id="guid_aa52cafa_e822_42c8_abdb_2a67ebdb7f05" class="artboard scene" >
+<div id="guid_8c5c1e12_bb93_45cf_93ff_92826e4f73d0" class="hero-element" >
+<img id="guid_81794e90_f17f_4b6c_8fda_9fcc01c7dff8" class="hero-element" src="guid_81794e90_f17f_4b6c_8fda_9fcc01c7dff8.png" >
+
+</div>
+<div id="guid_23cb327b_004f_433c_a232_1c833f01af44" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_23cb327b_004f_433c_a232_1c833f01af44-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_efd3913d_4e14_464a_bea3_f8be0792e44e">
+              <div class="fusion--scene--content">
+                
+<div id="guid_efd3913d_4e14_464a_bea3_f8be0792e44e" class="artboard scene" >
+<div id="guid_4c8866cd_33f4_41ed_8470_353fa1afc66f" class="hero-element" >
+<img id="guid_2af14ea9_d0fe_4857_997c_968ee24d9965" class="hero-element" src="guid_2af14ea9_d0fe_4857_997c_968ee24d9965.jpg" >
+
+<div id="guid_730fd68b_fe09_4018_a6cb_c4c1a5f4b6ee" class="hero-element" >
+</div>
+<div id="guid_78507281_1494_438f_b64d_c10dffa31e85" class="hero-element" >At the center of Piazza San Pietro stands an ancient Egyptian<br/>Obelisk, which was brought to Rome in 37 AD and erected in<br/>its current location in 1586.<br/>The obelisk is a towering 40 meters high and serves as a focal<br/>point of the square, symbolizing the triumph of Christianity<br/>over paganism.
+</div>
+</div>
+<div id="guid_b919a662_9bf5_483e_a117_95e8462cc351" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_b919a662_9bf5_483e_a117_95e8462cc351-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_3f0d1079_6f14_4573_b3f8_7683067dc138">
+              <div class="fusion--scene--content">
+                
+<div id="guid_3f0d1079_6f14_4573_b3f8_7683067dc138" class="artboard scene" >
+<img id="guid_6e60fc9a_a206_4963_9e65_79e246b5a9c0" class="hero-element" src="guid_6e60fc9a_a206_4963_9e65_79e246b5a9c0.png" >
+
+<div id="guid_80056d01_a649_408f_9005_f2712cac2d04" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_80056d01_a649_408f_9005_f2712cac2d04-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_b9bf3309_e897_492f_a365_9c70bd6b9417" class="hero-element" >Theodor Ameyden said that the jet of water from the top of the fountain <br/>“seemed to rise in the air like a veritable river.” <br/>He called it “the most beautiful fountain which exists in Europe”
+</div>
+<div id="guid_41204d75_00d3_4cee_8a78_abb3b84ad1ff" class="hero-element" >The fountain had no pumps and operated purely by gravity, with a source of water higher<br/>than the fountain which caused the water to shoot upwards.
+</div>
+<div id="guid_1817c210_9ca3_458c_aede_9f28250e7c2c" class="hero-element" >In 1612, Pope Paul V commissioned Carlo Maderno to redesign the fountain on St. Peter’s Square,<br/> originally built in 1490 during the time of Pope Innocent VIII
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_402a2627_30c0_471b_9f8e_9076b2d1192e">
+              <div class="fusion--scene--content">
+                
+<div id="guid_402a2627_30c0_471b_9f8e_9076b2d1192e" class="artboard scene" >
+<img id="guid_87e0770a_ee6e_4230_b134_31eb77ec00fd" class="hero-element" src="guid_87e0770a_ee6e_4230_b134_31eb77ec00fd.png" >
+
+<div id="guid_43074ee7_c87f_4528_9538_ec363e1677f9" class="hero-element" undefined >After the completion of the Maderno Fountain,<br/>Pope Clement X commissioned Pietro Bernini<br/>to build the second fountain on the Southern <br/>side of the Obelisk. The fountain was <br/>completed in 1677. 
+</div>
+<div id="guid_cc7df519_f4f4_4f29_aaea_cf480cf6ffc2" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_cc7df519_f4f4_4f29_aaea_cf480cf6ffc2-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#fff" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_5095a7d4_fa54_475d_8157_9956f002e8c4">
+              <div class="fusion--scene--content">
+                
+<div id="guid_5095a7d4_fa54_475d_8157_9956f002e8c4" class="artboard scene" >
+<img id="guid_c1bf024d_3132_457f_87f6_01cc49847fec" class="hero-element" src="guid_c1bf024d_3132_457f_87f6_01cc49847fec.png" >
+
+<div id="guid_4199014b_5b06_4a45_94ba_1d2321d2b07d" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_4199014b_5b06_4a45_94ba_1d2321d2b07d-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_d8036015_f010_4639_b3b0_d5a11bc45a4b" class="hero-element" >The baldacchino, Bernini’s first work at St. Peter’s, stands below the dome. <br/>At 28.7 meter tall (94.3 ft), it is the largest piece of bronze in the world. 
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_e8ac2b9a_4bf0_4bde_b449_ec8af7d46088">
+              <div class="fusion--scene--content">
+                
+<div id="guid_e8ac2b9a_4bf0_4bde_b449_ec8af7d46088" class="artboard scene" >
+<img id="guid_33ac74ab_9e37_49d0_8315_e86d425d9f93" class="hero-element" src="guid_33ac74ab_9e37_49d0_8315_e86d425d9f93.png" >
+
+<div id="guid_18f09791_8793_497d_b48f_b72b63a1f15d" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -5963.7939453125px; top: 924.309814453125px;">
+        <path id="guid_18f09791_8793_497d_b48f_b72b63a1f15d-path" d="M 5982.896 -866.958 C 5982.896 -841.062 6004.751 -845.103 6004.751 -845.103 L 6054.867 -845.103 L 6054.867 -866.958 L 6004.751 -866.958 L 6004.751 -887.209 L 6022.759 -887.209 L 5992.684 -924.310 L 5963.794 -887.209 L 5982.896 -887.209 L 5982.896 -866.958 Z" fill="#000" stroke="#707070" stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<img id="guid_4dc41a3d_4db8_431c_aee4_64f2610cbe34" class="hero-element" src="guid_4dc41a3d_4db8_431c_aee4_64f2610cbe34.png" >
+
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            </div>
+          </div>
+        </div>
+
+      
+
+
+  <!-- Hero/Fusion Player -->
+  <script>
+    
+      document.addEventListener('DOMContentLoaded', function () {
+        window.player = new fusion.Player({
+          id: 'player',
+          // debug: true, 
+          scenes: [
+            
+            { 
+              id: 'guid_f36b5a6f_a897_41ed_ba23_e12ed145c13d', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_76a2f3c3_ecc0_43c9_b501_eea91d191063', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_1d513d11_0909_447c_8bb7_954103aa25cd', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_0016f738_42ca_4244_b6b3_38135437d9b4', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_a0db574a_9774_4faf_b8b0_6dbf97039cb2', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_17f4c71c_52d1_47fe_b9be_4f1ea8d0170d', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_de286227_7f90_469e_86fb_0c79ea0de200', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_8a00533f_f3cf_4a6d_8401_6138b22b5df6', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_5659c73c_7a86_4234_b2a5_f01cf0d3dc00', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_aa52cafa_e822_42c8_abdb_2a67ebdb7f05', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_efd3913d_4e14_464a_bea3_f8be0792e44e', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_3f0d1079_6f14_4573_b3f8_7683067dc138', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_402a2627_30c0_471b_9f8e_9076b2d1192e', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_5095a7d4_fa54_475d_8157_9956f002e8c4', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_e8ac2b9a_4bf0_4bde_b449_ec8af7d46088', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+          ]
+        });
+        player.loadScene('guid_f36b5a6f_a897_41ed_ba23_e12ed145c13d');      
+      });
+    
+  </script>
+
+  <!-- Hero Scenes -->
+  <script>
+    
+      //---
+      // Scene: guid_f36b5a6f_a897_41ed_ba23_e12ed145c13d
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_f36b5a6f_a897_41ed_ba23_e12ed145c13d');          
+    
+            //---
+            // guid_16d18938_aa27_485b_b049_4d3f4b8acc31 : Interaction (tap)
+            document.getElementById('guid_16d18938_aa27_485b_b049_4d3f4b8acc31').addEventListener('click', function() { player.loadScene('guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e');          
+    
+            //---
+            // guid_3a0e59b9_0c44_40c4_b60e_038e362e947b : Interaction (tap)
+            document.getElementById('guid_3a0e59b9_0c44_40c4_b60e_038e362e947b').addEventListener('click', function() { player.loadScene('guid_1d513d11_0909_447c_8bb7_954103aa25cd') });
+            
+            //---
+            // guid_dd4d8be4_65fc_49b6_b544_d6cfd8235756 : Interaction (tap)
+            document.getElementById('guid_dd4d8be4_65fc_49b6_b544_d6cfd8235756').addEventListener('click', function() { player.loadScene('guid_0016f738_42ca_4244_b6b3_38135437d9b4') });
+            
+            //---
+            // guid_995aa660_6ca9_44e4_9fc6_4aca219c755b : Interaction (tap)
+            document.getElementById('guid_995aa660_6ca9_44e4_9fc6_4aca219c755b').addEventListener('click', function() { player.loadScene('guid_76a2f3c3_ecc0_43c9_b501_eea91d191063') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_76a2f3c3_ecc0_43c9_b501_eea91d191063
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_76a2f3c3_ecc0_43c9_b501_eea91d191063');          
+    
+            //---
+            // guid_b7585a43_b619_4664_9646_fda213427499 : Interaction (tap)
+            document.getElementById('guid_b7585a43_b619_4664_9646_fda213427499').addEventListener('click', function() { player.loadScene('guid_a0db574a_9774_4faf_b8b0_6dbf97039cb2') });
+            
+            //---
+            // guid_ec9a402f_faa0_4a67_abdc_9b64237d199c : Interaction (tap)
+            document.getElementById('guid_ec9a402f_faa0_4a67_abdc_9b64237d199c').addEventListener('click', function() { player.loadScene('guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_1d513d11_0909_447c_8bb7_954103aa25cd
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_1d513d11_0909_447c_8bb7_954103aa25cd');          
+    
+            //---
+            // guid_7c137cf3_5e30_41e3_a5c6_74df252ff0c8 : Interaction (tap)
+            document.getElementById('guid_7c137cf3_5e30_41e3_a5c6_74df252ff0c8').addEventListener('click', function() { player.loadScene('guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2') });
+            
+            //---
+            // guid_8380d7a1_480d_4a53_b958_2e04b9200ccf : Interaction (tap)
+            document.getElementById('guid_8380d7a1_480d_4a53_b958_2e04b9200ccf').addEventListener('click', function() { player.loadScene('guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e') });
+            
+            //---
+            // guid_40b35a4a_4b3c_4142_bf5c_8e52225da59c : Interaction (tap)
+            document.getElementById('guid_40b35a4a_4b3c_4142_bf5c_8e52225da59c').addEventListener('click', function() { player.loadScene('guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2') });
+            
+            //---
+            // guid_b2adbdc2_4632_4f96_bb17_02d00bf3e747 : Interaction (tap)
+            document.getElementById('guid_b2adbdc2_4632_4f96_bb17_02d00bf3e747').addEventListener('click', function() { player.loadScene('guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_0016f738_42ca_4244_b6b3_38135437d9b4
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_0016f738_42ca_4244_b6b3_38135437d9b4');          
+    
+            //---
+            // guid_25964297_ff3f_4814_9be2_b351b37d7ab4 : Interaction (tap)
+            document.getElementById('guid_25964297_ff3f_4814_9be2_b351b37d7ab4').addEventListener('click', function() { player.loadScene('guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e') });
+            
+            //---
+            // guid_0a9a66de_5215_4913_8a45_2bcbce6ea966 : Interaction (tap)
+            document.getElementById('guid_0a9a66de_5215_4913_8a45_2bcbce6ea966').addEventListener('click', function() { player.loadScene('guid_efd3913d_4e14_464a_bea3_f8be0792e44e') });
+            
+            //---
+            // guid_7932925e_543f_4bb9_9960_527e8244c516 : Interaction (tap)
+            document.getElementById('guid_7932925e_543f_4bb9_9960_527e8244c516').addEventListener('click', function() { player.loadScene('guid_3f0d1079_6f14_4573_b3f8_7683067dc138') });
+            
+            //---
+            // guid_7f6f9e9c_dbe2_49d2_b8f5_0c755484f466 : Interaction (tap)
+            document.getElementById('guid_7f6f9e9c_dbe2_49d2_b8f5_0c755484f466').addEventListener('click', function() { player.loadScene('guid_402a2627_30c0_471b_9f8e_9076b2d1192e') });
+            
+            //---
+            // guid_aa204e89_10c0_47c4_92dd_793171299e57 : Interaction (tap)
+            document.getElementById('guid_aa204e89_10c0_47c4_92dd_793171299e57').addEventListener('click', function() { player.loadScene('guid_efd3913d_4e14_464a_bea3_f8be0792e44e') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_a0db574a_9774_4faf_b8b0_6dbf97039cb2
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_a0db574a_9774_4faf_b8b0_6dbf97039cb2');          
+    
+          //---
+          // guid_f21bf3e5_9805_4fd3_b2c3_007d8d398a57 : load
+          (function() {
+            try {
+              var el = document.getElementById('guid_f21bf3e5_9805_4fd3_b2c3_007d8d398a57');
+              hero.add( el, 'load', {start: function(element) {
+                
+scene.timeline.play(0);
+              }.bind(el)} );
+            } catch (err) {
+              console.log("Error in custom script (guid_f21bf3e5_9805_4fd3_b2c3_007d8d398a57 : load) : ", err);
+            }
+          })();
+        
+            //---
+            // guid_f21bf3e5_9805_4fd3_b2c3_007d8d398a57 : Interaction (tap)
+            document.getElementById('guid_f21bf3e5_9805_4fd3_b2c3_007d8d398a57').addEventListener('click', function() { player.loadScene('guid_5095a7d4_fa54_475d_8157_9956f002e8c4') });
+            
+            //---
+            // guid_702c0fd8_ac5b_4999_8016_8d680ffd9f26 : Interaction (tap)
+            document.getElementById('guid_702c0fd8_ac5b_4999_8016_8d680ffd9f26').addEventListener('click', function() { player.loadScene('guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2');          
+    
+            //---
+            // guid_7b3fd2ec_986a_467d_8242_8130537a980f : Interaction (tap)
+            document.getElementById('guid_7b3fd2ec_986a_467d_8242_8130537a980f').addEventListener('click', function() { player.loadScene('guid_17f4c71c_52d1_47fe_b9be_4f1ea8d0170d') });
+            
+            //---
+            // guid_d50e0bef_af93_4e76_ab5c_2410642334f9 : Interaction (tap)
+            document.getElementById('guid_d50e0bef_af93_4e76_ab5c_2410642334f9').addEventListener('click', function() { player.loadScene('guid_5659c73c_7a86_4234_b2a5_f01cf0d3dc00') });
+            
+            //---
+            // guid_b2507e64_6999_406b_b42b_c5acce4cdf16 : Interaction (tap)
+            document.getElementById('guid_b2507e64_6999_406b_b42b_c5acce4cdf16').addEventListener('click', function() { player.loadScene('guid_aa52cafa_e822_42c8_abdb_2a67ebdb7f05') });
+            
+            //---
+            // guid_0e47b870_f26c_46ac_a68d_c528d16083e7 : Interaction (tap)
+            document.getElementById('guid_0e47b870_f26c_46ac_a68d_c528d16083e7').addEventListener('click', function() { player.loadScene('guid_de286227_7f90_469e_86fb_0c79ea0de200') });
+            
+            //---
+            // guid_4e5820fc_80e5_4807_bf4b_ac59d9f67b8d : Interaction (tap)
+            document.getElementById('guid_4e5820fc_80e5_4807_bf4b_ac59d9f67b8d').addEventListener('click', function() { player.loadScene('guid_8a00533f_f3cf_4a6d_8401_6138b22b5df6') });
+            
+            //---
+            // guid_4817c975_44f9_4682_9457_4b40d03d5558 : Interaction (tap)
+            document.getElementById('guid_4817c975_44f9_4682_9457_4b40d03d5558').addEventListener('click', function() { player.loadScene('guid_1d513d11_0909_447c_8bb7_954103aa25cd') });
+            
+            //---
+            // guid_92af67be_74ce_453e_b46b_b5b220ad499e : Interaction (tap)
+            document.getElementById('guid_92af67be_74ce_453e_b46b_b5b220ad499e').addEventListener('click', function() { player.loadScene('guid_1d513d11_0909_447c_8bb7_954103aa25cd') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_17f4c71c_52d1_47fe_b9be_4f1ea8d0170d
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_17f4c71c_52d1_47fe_b9be_4f1ea8d0170d');          
+    
+            //---
+            // guid_4e2490df_029f_406c_9eae_33e2218bbbdf : Interaction (tap)
+            document.getElementById('guid_4e2490df_029f_406c_9eae_33e2218bbbdf').addEventListener('click', function() { player.loadScene('guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_de286227_7f90_469e_86fb_0c79ea0de200
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_de286227_7f90_469e_86fb_0c79ea0de200');          
+    
+          //---
+          // guid_dee50845_6a4b_408e_ab26_90dd1c11f697 : load
+          (function() {
+            try {
+              var el = document.getElementById('guid_dee50845_6a4b_408e_ab26_90dd1c11f697');
+              hero.add( el, 'load', {start: function(element) {
+                scene.timeline.play(0);
+              }.bind(el)} );
+            } catch (err) {
+              console.log("Error in custom script (guid_dee50845_6a4b_408e_ab26_90dd1c11f697 : load) : ", err);
+            }
+          })();
+        
+            //---
+            // guid_913530f3_508d_4f4a_b470_5effaedd0632 : Interaction (tap)
+            document.getElementById('guid_913530f3_508d_4f4a_b470_5effaedd0632').addEventListener('click', function() { player.loadScene('guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_8a00533f_f3cf_4a6d_8401_6138b22b5df6
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_8a00533f_f3cf_4a6d_8401_6138b22b5df6');          
+    
+            //---
+            // guid_4d072d1a_1e5d_4ed9_b902_b038e1029403 : Interaction (tap)
+            document.getElementById('guid_4d072d1a_1e5d_4ed9_b902_b038e1029403').addEventListener('click', function() { player.loadScene('guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_5659c73c_7a86_4234_b2a5_f01cf0d3dc00
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_5659c73c_7a86_4234_b2a5_f01cf0d3dc00');          
+    
+            //---
+            // guid_bd68566a_39d8_40b3_bd48_73d6a507b4c4 : Interaction (tap)
+            document.getElementById('guid_bd68566a_39d8_40b3_bd48_73d6a507b4c4').addEventListener('click', function() { player.loadScene('guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_aa52cafa_e822_42c8_abdb_2a67ebdb7f05
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_aa52cafa_e822_42c8_abdb_2a67ebdb7f05');          
+    
+          //---
+          // guid_8c5c1e12_bb93_45cf_93ff_92826e4f73d0 : load
+          (function() {
+            try {
+              var el = document.getElementById('guid_8c5c1e12_bb93_45cf_93ff_92826e4f73d0');
+              hero.add( el, 'load', {start: function(element) {
+                scene.timeline.play(0);
+              }.bind(el)} );
+            } catch (err) {
+              console.log("Error in custom script (guid_8c5c1e12_bb93_45cf_93ff_92826e4f73d0 : load) : ", err);
+            }
+          })();
+        
+            //---
+            // guid_23cb327b_004f_433c_a232_1c833f01af44 : Interaction (tap)
+            document.getElementById('guid_23cb327b_004f_433c_a232_1c833f01af44').addEventListener('click', function() { player.loadScene('guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_efd3913d_4e14_464a_bea3_f8be0792e44e
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_efd3913d_4e14_464a_bea3_f8be0792e44e');          
+    
+            //---
+            // guid_b919a662_9bf5_483e_a117_95e8462cc351 : Interaction (tap)
+            document.getElementById('guid_b919a662_9bf5_483e_a117_95e8462cc351').addEventListener('click', function() { player.loadScene('guid_0016f738_42ca_4244_b6b3_38135437d9b4') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_3f0d1079_6f14_4573_b3f8_7683067dc138
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_3f0d1079_6f14_4573_b3f8_7683067dc138');          
+    
+            //---
+            // guid_80056d01_a649_408f_9005_f2712cac2d04 : Interaction (tap)
+            document.getElementById('guid_80056d01_a649_408f_9005_f2712cac2d04').addEventListener('click', function() { player.loadScene('guid_0016f738_42ca_4244_b6b3_38135437d9b4') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_402a2627_30c0_471b_9f8e_9076b2d1192e
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_402a2627_30c0_471b_9f8e_9076b2d1192e');          
+    
+            //---
+            // guid_cc7df519_f4f4_4f29_aaea_cf480cf6ffc2 : Interaction (tap)
+            document.getElementById('guid_cc7df519_f4f4_4f29_aaea_cf480cf6ffc2').addEventListener('click', function() { player.loadScene('guid_0016f738_42ca_4244_b6b3_38135437d9b4') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_5095a7d4_fa54_475d_8157_9956f002e8c4
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_5095a7d4_fa54_475d_8157_9956f002e8c4');          
+    
+            //---
+            // guid_c1bf024d_3132_457f_87f6_01cc49847fec : Interaction (tap)
+            document.getElementById('guid_c1bf024d_3132_457f_87f6_01cc49847fec').addEventListener('click', function() { player.loadScene('guid_e8ac2b9a_4bf0_4bde_b449_ec8af7d46088') });
+            
+            //---
+            // guid_4199014b_5b06_4a45_94ba_1d2321d2b07d : Interaction (tap)
+            document.getElementById('guid_4199014b_5b06_4a45_94ba_1d2321d2b07d').addEventListener('click', function() { player.loadScene('guid_a0db574a_9774_4faf_b8b0_6dbf97039cb2') });
+            
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_e8ac2b9a_4bf0_4bde_b449_ec8af7d46088
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_e8ac2b9a_4bf0_4bde_b449_ec8af7d46088');          
+    
+            //---
+            // guid_18f09791_8793_497d_b48f_b72b63a1f15d : Interaction (tap)
+            document.getElementById('guid_18f09791_8793_497d_b48f_b72b63a1f15d').addEventListener('click', function() { player.loadScene('guid_a0db574a_9774_4faf_b8b0_6dbf97039cb2') });
+            
+        }, 1);
+      }); // Scene end    
+    
+  </script>
+
+  <!-- Hero Timelines -->
+  <script>
+    
+    //---
+    // Scene: guid_f36b5a6f_a897_41ed_ba23_e12ed145c13d
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_f36b5a6f_a897_41ed_ba23_e12ed145c13d');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_16bf2ab1_a7ed_43d9_88c4_6b37ddf59d18
+      var guid_16bf2ab1_a7ed_43d9_88c4_6b37ddf59d18_tl = function() {
+        var el = document.getElementById('guid_16bf2ab1_a7ed_43d9_88c4_6b37ddf59d18');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '440.500px -73.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 1.9, {x: 99}, {x: 32, ease: Back.easeOut}), 0 );
+        return tl;
+      }
+      tl.add(guid_16bf2ab1_a7ed_43d9_88c4_6b37ddf59d18_tl(), 0);
+      
+      // Element: #guid_16d18938_aa27_485b_b049_4d3f4b8acc31
+      var guid_16d18938_aa27_485b_b049_4d3f4b8acc31_tl = function() {
+        var el = document.getElementById('guid_16d18938_aa27_485b_b049_4d3f4b8acc31');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '480.000px 480.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 3, {x: 0}, {x: 960, ease: Expo.easeOut}), 0 );
+        return tl;
+      }
+      tl.add(guid_16d18938_aa27_485b_b049_4d3f4b8acc31_tl(), 0);
+      
+      // Element: #guid_1c23fbe1_3b95_46c4_8010_5524afdb7145
+      var guid_1c23fbe1_3b95_46c4_8010_5524afdb7145_tl = function() {
+        var el = document.getElementById('guid_1c23fbe1_3b95_46c4_8010_5524afdb7145');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '397.500px -55.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 1.9, {x: 99}, {x: 234}), 0 );
+        return tl;
+      }
+      tl.add(guid_1c23fbe1_3b95_46c4_8010_5524afdb7145_tl(), 0);
+      
+      // Element: #guid_4d18d130_d440_4d50_a92d_28e88c8797bf
+      var guid_4d18d130_d440_4d50_a92d_28e88c8797bf_tl = function() {
+        var el = document.getElementById('guid_4d18d130_d440_4d50_a92d_28e88c8797bf');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '174.000px 0.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 1.9, {x: 612.5}, {x: 60}), 0 ); 
+        tl.add( TweenMax.fromTo(el, 1.9, {opacity: 0}, {opacity: 100}), 0 );
+        return tl;
+      }
+      tl.add(guid_4d18d130_d440_4d50_a92d_28e88c8797bf_tl(), 0);
+      
+      // Element: #guid_9f4a83bf_9bbd_498f_a0fb_675e40a8923b
+      var guid_9f4a83bf_9bbd_498f_a0fb_675e40a8923b_tl = function() {
+        var el = document.getElementById('guid_9f4a83bf_9bbd_498f_a0fb_675e40a8923b');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '153.500px 0.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 1.9, {x: 136.5}, {x: 266.5}), 0 ); 
+        tl.add( TweenMax.fromTo(el, 1.9, {opacity: 0}, {opacity: 100}), 0 );
+        return tl;
+      }
+      tl.add(guid_9f4a83bf_9bbd_498f_a0fb_675e40a8923b_tl(), 0);
+      
+    });
+    
+    //---
+    // Scene: guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_ca9b3b9e_27d8_4313_9bd4_a5af94e5a82e');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_883b1639_65c4_468d_be1a_4b17401fae93
+      var guid_883b1639_65c4_468d_be1a_4b17401fae93_tl = function() {
+        var el = document.getElementById('guid_883b1639_65c4_468d_be1a_4b17401fae93');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '305.000px -55.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.8, {x: 99}, {x: 0}), 0 ); 
+        tl.add( TweenMax.fromTo(el, 0.8, {y: 143}, {y: -29}), 0 );
+        return tl;
+      }
+      tl.add(guid_883b1639_65c4_468d_be1a_4b17401fae93_tl(), 0);
+      
+      // Element: #guid_ad1bb778_4390_4457_a4d0_781736cfffb3
+      var guid_ad1bb778_4390_4457_a4d0_781736cfffb3_tl = function() {
+        var el = document.getElementById('guid_ad1bb778_4390_4457_a4d0_781736cfffb3');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '291.500px -41.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.8, {x: 113}, {x: 14}), 0 ); 
+        tl.add( TweenMax.fromTo(el, 0.8, {y: 410}, {y: 120}), 0 );
+        return tl;
+      }
+      tl.add(guid_ad1bb778_4390_4457_a4d0_781736cfffb3_tl(), 0);
+      
+      // Element: #guid_6d14fe1a_2a9e_493b_8c2a_1d3062a89807
+      var guid_6d14fe1a_2a9e_493b_8c2a_1d3062a89807_tl = function() {
+        var el = document.getElementById('guid_6d14fe1a_2a9e_493b_8c2a_1d3062a89807');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '39.336px 39.336px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {y: -80}, {y: 40}), 0.7 );
+        return tl;
+      }
+      tl.add(guid_6d14fe1a_2a9e_493b_8c2a_1d3062a89807_tl(), 0);
+      
+      // Element: #guid_c41c7e57_fb66_4648_b191_25fcd94c332b
+      var guid_c41c7e57_fb66_4648_b191_25fcd94c332b_tl = function() {
+        var el = document.getElementById('guid_c41c7e57_fb66_4648_b191_25fcd94c332b');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '39.199px 39.336px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {y: -80}, {y: 40}), 0.8 );
+        return tl;
+      }
+      tl.add(guid_c41c7e57_fb66_4648_b191_25fcd94c332b_tl(), 0);
+      
+      // Element: #guid_cfa6be6f_64c5_401f_b803_a9f87ab0d5a8
+      var guid_cfa6be6f_64c5_401f_b803_a9f87ab0d5a8_tl = function() {
+        var el = document.getElementById('guid_cfa6be6f_64c5_401f_b803_a9f87ab0d5a8');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '39.336px 39.336px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {y: -80}, {y: 40}), 0.9 );
+        return tl;
+      }
+      tl.add(guid_cfa6be6f_64c5_401f_b803_a9f87ab0d5a8_tl(), 0);
+      
+      // Element: #guid_4b4bfaeb_e4fb_49e9_ba1c_cca2e08746be
+      var guid_4b4bfaeb_e4fb_49e9_ba1c_cca2e08746be_tl = function() {
+        var el = document.getElementById('guid_4b4bfaeb_e4fb_49e9_ba1c_cca2e08746be');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '38.559px 39.336px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {y: -80}, {y: 40}), 1 );
+        return tl;
+      }
+      tl.add(guid_4b4bfaeb_e4fb_49e9_ba1c_cca2e08746be_tl(), 0);
+      
+    });
+    
+    //---
+    // Scene: guid_76a2f3c3_ecc0_43c9_b501_eea91d191063
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_76a2f3c3_ecc0_43c9_b501_eea91d191063');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_d84eb91e_0d1a_4c9b_94ca_91c531c2749f
+      var guid_d84eb91e_0d1a_4c9b_94ca_91c531c2749f_tl = function() {
+        var el = document.getElementById('guid_d84eb91e_0d1a_4c9b_94ca_91c531c2749f');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '314.118px 417.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 1, {x: 0}, {x: 500}), 0 ); 
+        tl.add( TweenMax.fromTo(el, 1, {y: 246}, {y: -976.8}), 0 ); 
+        tl.add( TweenMax.fromTo(el, 1, {scaleX: 1}, {scaleX: 5}), 0 ); 
+        tl.add( TweenMax.fromTo(el, 1, {scaleY: 1}, {scaleY: 5}), 0 );
+        return tl;
+      }
+      tl.add(guid_d84eb91e_0d1a_4c9b_94ca_91c531c2749f_tl(), 0);
+      
+      // Element: #guid_2ec1fd28_a6bb_4b4f_be2d_407b6b9e56b8
+      var guid_2ec1fd28_a6bb_4b4f_be2d_407b6b9e56b8_tl = function() {
+        var el = document.getElementById('guid_2ec1fd28_a6bb_4b4f_be2d_407b6b9e56b8');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '960.000px 540.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.4, {opacity: 0}, {opacity: 1}), 0.9 );
+        return tl;
+      }
+      tl.add(guid_2ec1fd28_a6bb_4b4f_be2d_407b6b9e56b8_tl(), 0);
+      
+      // Element: #guid_b7585a43_b619_4664_9646_fda213427499
+      var guid_b7585a43_b619_4664_9646_fda213427499_tl = function() {
+        var el = document.getElementById('guid_b7585a43_b619_4664_9646_fda213427499');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '961.566px 540.881px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.4, {opacity: 0}, {opacity: 1}), 0.9 );
+        return tl;
+      }
+      tl.add(guid_b7585a43_b619_4664_9646_fda213427499_tl(), 0);
+      
+      // Element: #guid_bc92702a_1813_44b1_925d_1315308eacdf
+      var guid_bc92702a_1813_44b1_925d_1315308eacdf_tl = function() {
+        var el = document.getElementById('guid_bc92702a_1813_44b1_925d_1315308eacdf');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '520.500px 6.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.4, {opacity: 0}, {opacity: 1}), 0.9 );
+        return tl;
+      }
+      tl.add(guid_bc92702a_1813_44b1_925d_1315308eacdf_tl(), 0);
+      
+    });
+    
+    //---
+    // Scene: guid_1d513d11_0909_447c_8bb7_954103aa25cd
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_1d513d11_0909_447c_8bb7_954103aa25cd');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_232b508d_c18d_4075_8ab5_29dae963166b
+      var guid_232b508d_c18d_4075_8ab5_29dae963166b_tl = function() {
+        var el = document.getElementById('guid_232b508d_c18d_4075_8ab5_29dae963166b');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '314.000px 417.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 1, {scaleX: 1}, {scaleX: 5}), 0 ); 
+        tl.add( TweenMax.fromTo(el, 1, {scaleY: 1}, {scaleY: 5}), 0 );
+        return tl;
+      }
+      tl.add(guid_232b508d_c18d_4075_8ab5_29dae963166b_tl(), 0);
+      
+      // Element: #guid_7c137cf3_5e30_41e3_a5c6_74df252ff0c8
+      var guid_7c137cf3_5e30_41e3_a5c6_74df252ff0c8_tl = function() {
+        var el = document.getElementById('guid_7c137cf3_5e30_41e3_a5c6_74df252ff0c8');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '960.000px 623.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {opacity: 0}, {opacity: 1}), 0.9 );
+        return tl;
+      }
+      tl.add(guid_7c137cf3_5e30_41e3_a5c6_74df252ff0c8_tl(), 0);
+      
+      // Element: #guid_40b35a4a_4b3c_4142_bf5c_8e52225da59c
+      var guid_40b35a4a_4b3c_4142_bf5c_8e52225da59c_tl = function() {
+        var el = document.getElementById('guid_40b35a4a_4b3c_4142_bf5c_8e52225da59c');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '158.000px 72.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {opacity: 0}, {opacity: 0.3}), 1.3 );
+        return tl;
+      }
+      tl.add(guid_40b35a4a_4b3c_4142_bf5c_8e52225da59c_tl(), 0);
+      
+      // Element: #guid_b2adbdc2_4632_4f96_bb17_02d00bf3e747
+      var guid_b2adbdc2_4632_4f96_bb17_02d00bf3e747_tl = function() {
+        var el = document.getElementById('guid_b2adbdc2_4632_4f96_bb17_02d00bf3e747');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '0.000px 11.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {opacity: 0}, {opacity: 1}), 1.3 );
+        return tl;
+      }
+      tl.add(guid_b2adbdc2_4632_4f96_bb17_02d00bf3e747_tl(), 0);
+      
+    });
+    
+    //---
+    // Scene: guid_0016f738_42ca_4244_b6b3_38135437d9b4
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_0016f738_42ca_4244_b6b3_38135437d9b4');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_ac652614_ae54_4f81_b2aa_bbd9271f0200
+      var guid_ac652614_ae54_4f81_b2aa_bbd9271f0200_tl = function() {
+        var el = document.getElementById('guid_ac652614_ae54_4f81_b2aa_bbd9271f0200');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '314.000px 417.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 1, {x: 1273}, {x: 1919}), 0 ); 
+        tl.add( TweenMax.fromTo(el, 1, {scale: 1}, {scale: 5}), 0 );
+        return tl;
+      }
+      tl.add(guid_ac652614_ae54_4f81_b2aa_bbd9271f0200_tl(), 0);
+      
+      // Element: #guid_10558fc8_f751_4f80_9300_6e65661a87f7
+      var guid_10558fc8_f751_4f80_9300_6e65661a87f7_tl = function() {
+        var el = document.getElementById('guid_10558fc8_f751_4f80_9300_6e65661a87f7');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '968.500px 544.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.4, {opacity: 0}, {opacity: 1}), 0.9 );
+        return tl;
+      }
+      tl.add(guid_10558fc8_f751_4f80_9300_6e65661a87f7_tl(), 0);
+      
+      // Element: #guid_91f7de9e_c419_4331_9e9d_32d53febb344
+      var guid_91f7de9e_c419_4331_9e9d_32d53febb344_tl = function() {
+        var el = document.getElementById('guid_91f7de9e_c419_4331_9e9d_32d53febb344');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '118.500px 118.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline();
+        return tl;
+      }
+      tl.add(guid_91f7de9e_c419_4331_9e9d_32d53febb344_tl(), 0);
+      
+      // Element: #guid_2bb1f944_b049_49d2_8d4b_db8b4008bfa9
+      var guid_2bb1f944_b049_49d2_8d4b_db8b4008bfa9_tl = function() {
+        var el = document.getElementById('guid_2bb1f944_b049_49d2_8d4b_db8b4008bfa9');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '305.811px 70.649px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {opacity: 0}, {opacity: 0.3}), 0.9 );
+        return tl;
+      }
+      tl.add(guid_2bb1f944_b049_49d2_8d4b_db8b4008bfa9_tl(), 0);
+      
+      // Element: #guid_0a9a66de_5215_4913_8a45_2bcbce6ea966
+      var guid_0a9a66de_5215_4913_8a45_2bcbce6ea966_tl = function() {
+        var el = document.getElementById('guid_0a9a66de_5215_4913_8a45_2bcbce6ea966');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '1104.000px 634.312px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {opacity: 0}, {opacity: 0.3}), 0.9 );
+        return tl;
+      }
+      tl.add(guid_0a9a66de_5215_4913_8a45_2bcbce6ea966_tl(), 0);
+      
+      // Element: #guid_aa204e89_10c0_47c4_92dd_793171299e57
+      var guid_aa204e89_10c0_47c4_92dd_793171299e57_tl = function() {
+        var el = document.getElementById('guid_aa204e89_10c0_47c4_92dd_793171299e57');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '1104.500px 633.501px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {opacity: 0}, {opacity: 1}), 0.9 );
+        return tl;
+      }
+      tl.add(guid_aa204e89_10c0_47c4_92dd_793171299e57_tl(), 0);
+      
+      // Element: #guid_3fdb1921_7b4d_466a_921c_ff72c4dc7ed1
+      var guid_3fdb1921_7b4d_466a_921c_ff72c4dc7ed1_tl = function() {
+        var el = document.getElementById('guid_3fdb1921_7b4d_466a_921c_ff72c4dc7ed1');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '301.544px 66.873px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {opacity: 0}, {opacity: 1}), 0.9 );
+        return tl;
+      }
+      tl.add(guid_3fdb1921_7b4d_466a_921c_ff72c4dc7ed1_tl(), 0);
+      
+      // Element: #guid_940bc082_f6b3_494f_a1d0_2227e6b0033e
+      var guid_940bc082_f6b3_494f_a1d0_2227e6b0033e_tl = function() {
+        var el = document.getElementById('guid_940bc082_f6b3_494f_a1d0_2227e6b0033e');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '1004.500px 584.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {opacity: 0}, {opacity: 0.6}), 0.9 );
+        return tl;
+      }
+      tl.add(guid_940bc082_f6b3_494f_a1d0_2227e6b0033e_tl(), 0);
+      
+    });
+    
+    //---
+    // Scene: guid_a0db574a_9774_4faf_b8b0_6dbf97039cb2
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_a0db574a_9774_4faf_b8b0_6dbf97039cb2');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_f21bf3e5_9805_4fd3_b2c3_007d8d398a57
+      var guid_f21bf3e5_9805_4fd3_b2c3_007d8d398a57_tl = function() {
+        var el = document.getElementById('guid_f21bf3e5_9805_4fd3_b2c3_007d8d398a57');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '960.000px 759.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 5, {y: 0}, {y: -439}), 0 );
+        return tl;
+      }
+      tl.add(guid_f21bf3e5_9805_4fd3_b2c3_007d8d398a57_tl(), 0);
+      
+      // Element: #guid_425c3db8_243d_43af_90c7_714fa2bdbacd
+      var guid_425c3db8_243d_43af_90c7_714fa2bdbacd_tl = function() {
+        var el = document.getElementById('guid_425c3db8_243d_43af_90c7_714fa2bdbacd');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '927.500px 83.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.7, {opacity: 0}, {opacity: 1}), 4.3 );
+        return tl;
+      }
+      tl.add(guid_425c3db8_243d_43af_90c7_714fa2bdbacd_tl(), 0);
+      
+      // Element: #guid_4770cc3e_11a0_41a6_8a8c_f3f06d71eac5
+      var guid_4770cc3e_11a0_41a6_8a8c_f3f06d71eac5_tl = function() {
+        var el = document.getElementById('guid_4770cc3e_11a0_41a6_8a8c_f3f06d71eac5');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '965.500px 992.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.7, {opacity: 0}, {opacity: 1}), 4.3 );
+        return tl;
+      }
+      tl.add(guid_4770cc3e_11a0_41a6_8a8c_f3f06d71eac5_tl(), 0);
+      
+    });
+    
+    //---
+    // Scene: guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_e377e26f_1a41_41f5_b53f_a00e5d1b3ec2');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_8c15200f_f39f_4d3c_a837_0588c9b42cfd
+      var guid_8c15200f_f39f_4d3c_a837_0588c9b42cfd_tl = function() {
+        var el = document.getElementById('guid_8c15200f_f39f_4d3c_a837_0588c9b42cfd');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '801.500px 756.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.6, {y: 669}, {y: 0}), 0 );
+        return tl;
+      }
+      tl.add(guid_8c15200f_f39f_4d3c_a837_0588c9b42cfd_tl(), 0);
+      
+      // Element: #guid_d50e0bef_af93_4e76_ab5c_2410642334f9
+      var guid_d50e0bef_af93_4e76_ab5c_2410642334f9_tl = function() {
+        var el = document.getElementById('guid_d50e0bef_af93_4e76_ab5c_2410642334f9');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '294.000px 756.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {x: -619}, {x: 0}), 0.4 );
+        return tl;
+      }
+      tl.add(guid_d50e0bef_af93_4e76_ab5c_2410642334f9_tl(), 0);
+      
+      // Element: #guid_7b3fd2ec_986a_467d_8242_8130537a980f
+      var guid_7b3fd2ec_986a_467d_8242_8130537a980f_tl = function() {
+        var el = document.getElementById('guid_7b3fd2ec_986a_467d_8242_8130537a980f');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '392.000px 205.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {x: -807}, {x: 0}), 0.9 );
+        return tl;
+      }
+      tl.add(guid_7b3fd2ec_986a_467d_8242_8130537a980f_tl(), 0);
+      
+      // Element: #guid_4e5820fc_80e5_4807_bf4b_ac59d9f67b8d
+      var guid_4e5820fc_80e5_4807_bf4b_ac59d9f67b8d_tl = function() {
+        var el = document.getElementById('guid_4e5820fc_80e5_4807_bf4b_ac59d9f67b8d');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '1727.000px 222.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {x: 1963}, {x: 1380}), 1.3 );
+        return tl;
+      }
+      tl.add(guid_4e5820fc_80e5_4807_bf4b_ac59d9f67b8d_tl(), 0);
+      
+      // Element: #guid_0e47b870_f26c_46ac_a68d_c528d16083e7
+      var guid_0e47b870_f26c_46ac_a68d_c528d16083e7_tl = function() {
+        var el = document.getElementById('guid_0e47b870_f26c_46ac_a68d_c528d16083e7');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '1072.000px 205.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {y: -433}, {y: 0}), 0.5 );
+        return tl;
+      }
+      tl.add(guid_0e47b870_f26c_46ac_a68d_c528d16083e7_tl(), 0);
+      
+      // Element: #guid_b2507e64_6999_406b_b42b_c5acce4cdf16
+      var guid_b2507e64_6999_406b_b42b_c5acce4cdf16_tl = function() {
+        var el = document.getElementById('guid_b2507e64_6999_406b_b42b_c5acce4cdf16');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '1463.000px 756.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.5, {x: 1942}, {x: 1006}), 0.6 );
+        return tl;
+      }
+      tl.add(guid_b2507e64_6999_406b_b42b_c5acce4cdf16_tl(), 0);
+      
+    });
+    
+    //---
+    // Scene: guid_17f4c71c_52d1_47fe_b9be_4f1ea8d0170d
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_17f4c71c_52d1_47fe_b9be_4f1ea8d0170d');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_de286227_7f90_469e_86fb_0c79ea0de200
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_de286227_7f90_469e_86fb_0c79ea0de200');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_dee50845_6a4b_408e_ab26_90dd1c11f697
+      var guid_dee50845_6a4b_408e_ab26_90dd1c11f697_tl = function() {
+        var el = document.getElementById('guid_dee50845_6a4b_408e_ab26_90dd1c11f697');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '1767.000px 745.027px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 5.1, {y: -0.027}, {y: -410.027}), 0 );
+        return tl;
+      }
+      tl.add(guid_dee50845_6a4b_408e_ab26_90dd1c11f697_tl(), 0);
+      
+    });
+    
+    //---
+    // Scene: guid_8a00533f_f3cf_4a6d_8401_6138b22b5df6
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_8a00533f_f3cf_4a6d_8401_6138b22b5df6');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_5659c73c_7a86_4234_b2a5_f01cf0d3dc00
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_5659c73c_7a86_4234_b2a5_f01cf0d3dc00');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_aa52cafa_e822_42c8_abdb_2a67ebdb7f05
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_aa52cafa_e822_42c8_abdb_2a67ebdb7f05');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_8c5c1e12_bb93_45cf_93ff_92826e4f73d0
+      var guid_8c5c1e12_bb93_45cf_93ff_92826e4f73d0_tl = function() {
+        var el = document.getElementById('guid_8c5c1e12_bb93_45cf_93ff_92826e4f73d0');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '1966.138px 1112.738px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 3.1, {y: -432.738}, {y: -712.738}), 0 );
+        return tl;
+      }
+      tl.add(guid_8c5c1e12_bb93_45cf_93ff_92826e4f73d0_tl(), 0);
+      
+    });
+    
+    //---
+    // Scene: guid_efd3913d_4e14_464a_bea3_f8be0792e44e
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_efd3913d_4e14_464a_bea3_f8be0792e44e');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_2af14ea9_d0fe_4857_997c_968ee24d9965
+      var guid_2af14ea9_d0fe_4857_997c_968ee24d9965_tl = function() {
+        var el = document.getElementById('guid_2af14ea9_d0fe_4857_997c_968ee24d9965');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '964.500px 1447.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline();
+        return tl;
+      }
+      tl.add(guid_2af14ea9_d0fe_4857_997c_968ee24d9965_tl(), 0);
+      
+      // Element: #guid_4c8866cd_33f4_41ed_8470_353fa1afc66f
+      var guid_4c8866cd_33f4_41ed_8470_353fa1afc66f_tl = function() {
+        var el = document.getElementById('guid_4c8866cd_33f4_41ed_8470_353fa1afc66f');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '964.500px 1447.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 4.1, {y: 0}, {y: -1408}), 0 );
+        return tl;
+      }
+      tl.add(guid_4c8866cd_33f4_41ed_8470_353fa1afc66f_tl(), 0);
+      
+    });
+    
+    //---
+    // Scene: guid_3f0d1079_6f14_4573_b3f8_7683067dc138
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_3f0d1079_6f14_4573_b3f8_7683067dc138');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_402a2627_30c0_471b_9f8e_9076b2d1192e
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_402a2627_30c0_471b_9f8e_9076b2d1192e');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_5095a7d4_fa54_475d_8157_9956f002e8c4
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_5095a7d4_fa54_475d_8157_9956f002e8c4');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_c1bf024d_3132_457f_87f6_01cc49847fec
+      var guid_c1bf024d_3132_457f_87f6_01cc49847fec_tl = function() {
+        var el = document.getElementById('guid_c1bf024d_3132_457f_87f6_01cc49847fec');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '960.000px 1280.500px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 9.2, {y: 0}, {y: -1339}), 0 );
+        return tl;
+      }
+      tl.add(guid_c1bf024d_3132_457f_87f6_01cc49847fec_tl(), 0);
+      
+    });
+    
+    //---
+    // Scene: guid_e8ac2b9a_4bf0_4bde_b449_ec8af7d46088
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_e8ac2b9a_4bf0_4bde_b449_ec8af7d46088');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+      // Element: #guid_4dc41a3d_4db8_431c_aee4_64f2610cbe34
+      var guid_4dc41a3d_4db8_431c_aee4_64f2610cbe34_tl = function() {
+        var el = document.getElementById('guid_4dc41a3d_4db8_431c_aee4_64f2610cbe34');
+        // WIP: Removed since transformOrigin is removed 
+        //TweenMax.set(el, {force3D: true, transformOrigin: '943.000px 957.000px'});
+        TweenMax.set(el, {force3D: true});
+        var tl = gsap.timeline(); 
+        tl.add( TweenMax.fromTo(el, 0.1, {opacity: 0}, {opacity: 0}), 0 );
+        tl.add( TweenMax.to(el, 0.1, {opacity: 0.7 }), 0.8 ); 
+        tl.add( TweenMax.fromTo(el, 1.2, {scale: 0}, {scale: 1}), 1 );
+        return tl;
+      }
+      tl.add(guid_4dc41a3d_4db8_431c_aee4_64f2610cbe34_tl(), 0);
+      
+    });
+    
+  </script>
+
+  
+  
+</body>
+</html>
